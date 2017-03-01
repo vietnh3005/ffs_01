@@ -21,3 +21,11 @@
 
 en:
   hello: "Hello world"
+  welcome: "Welcome to"
+  title_page: "Fasta"
+  login: "Login"
+  time:
+    formats:
+      date: "%d-%m-%y"
+  home: "Home"
+  framgia: "Framgia"
