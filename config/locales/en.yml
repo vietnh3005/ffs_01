@@ -29,3 +29,31 @@ en:
       date: "%d-%m-%y"
   home: "Home"
   framgia: "Framgia"
+
+  flash:
+    danger:
+      please_log_in: "Please login"
+      not_logged_in: "User not logged it yet !!!"
+
+  controllers:
+    sessions:
+      invalid: "Invalid"
+
+  views:
+    layouts:
+      header:
+        logout: "Logout"
+
+    sessions:
+      new:
+        remember: "Remember me!"
+        new_user: "Create new user"
+        signup_now: "Signup now"
+        forgot: "Forgot"
+        forgot_password: "Forgot password?"
+
+    shared:
+      error_messages:
+        error: "Error"
+
+

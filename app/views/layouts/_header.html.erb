@@ -3,7 +3,23 @@
     <%= link_to t("title_page"), root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t("login"), "#", id: "head" %></li>
+        <% if logged_in? %>
+          <li>
+            <%= link_to logout_path, method: :delete do %>
+              <span class="glyphicon glyphicon-log-out"></span>
+              <%= t ".logout" %>
+            <% end %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to login_path,data: {toggle: "modal", target: "#newlogin"},
+              remote: true do %>
+              <span class="glyphicon glyphicon-log-in"></span>
+              <%= t"login" %>
+            <% end %>
+            <%= render "sessions/new" %>
+          </li>
+        <% end %>
       </ul>
     </nav>
   </div>
