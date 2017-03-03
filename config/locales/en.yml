@@ -29,3 +29,19 @@ en:
       date: "%d-%m-%y"
   home: "Home"
   framgia: "Framgia"
+  signup: "Sign up"
+  update: "Update"
+  back: "Back"
+  edit: "Edit"
+
+  users:
+    registrations:
+      edit:
+        blank: "(leave blank if you don't want to change it)"
+        minimum: "characters minimum"
+        current: "(we need your current password to confirm your changes)"
+      new:
+        minimum_length: "characters minimum"
+    shared:
+      links:
+        forgot: "Forgot your password?"
