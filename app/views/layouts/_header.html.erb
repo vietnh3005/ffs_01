@@ -3,7 +3,13 @@
     <%= link_to t("title_page"), root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t("login"), "#", id: "head" %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to current_user.name, edit_user_registration_path %></li>
+          <li><%= link_to t("logout"), destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to t("signup"), new_user_registration_path, id: "head" %></li>
+          <li><%= link_to t("login"), new_user_session_path, id: "head" %></li>
+        <% end %>
       </ul>
     </nav>
   </div>
