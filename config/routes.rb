@@ -9,4 +9,5 @@ Rails.application.routes.draw do
     resources :orders
     resources :users
   end
+  resources :products, only: [:show, :index]
 end

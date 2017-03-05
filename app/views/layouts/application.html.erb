@@ -8,8 +8,8 @@
     <%= javascript_include_tag "application", "data-turbolinks-track": true %>
     <%= render "layouts/shim" %>
   </head>
-  <body id="users">
-    <div class="user">
+  <body>
+    <div>
       <%= render "layouts/header" %>
       <div class="container">
         <% flash.each do |message_type, message| %>

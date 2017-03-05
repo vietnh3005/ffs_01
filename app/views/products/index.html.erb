@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <% @products.each do |product| %>
+      <div class="col-sm-4">
+        <article class="col-item">
+          <div class="photo">
+            <div class="options-cart-round">
+              <button class="btn btn-danger">
+                <span class="fa fa-shopping-cart"></span>
+              </button>
+            </div>
+            <%= link_to product_path(product) do %>
+              <%= default_image product %>
+            <% end %>
+          </div>
+          <div class="info">
+            <div class="row">
+              <div class="price-details col-md-6">
+                <h1><%= link_to product.name, product_path(product) %></h1>
+                <p class="price-new">
+                  <span>
+                    <%= number_to_currency product.price %>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    <% end %>
+  </div>
+</div>
