@@ -9,7 +9,6 @@ class CreateOrders < ActiveRecord::Migration[5.0]
       t.references :user, foreign_key: true
       t.references :shop, foreign_key: true
       t.references :discount, foreign_key: true
-      t.references :location, foreign_key: true
 
       t.timestamps
     end

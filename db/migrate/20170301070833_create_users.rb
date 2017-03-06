@@ -8,8 +8,6 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :phone
       t.integer :point
       t.integer :membership
-      t.boolean :is_admin
-      t.references :location, foreign_key: true
 
       t.timestamps
     end

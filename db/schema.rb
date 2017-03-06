@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20170302081546) do
 
   create_table "order_details", force: :cascade do |t|
     t.float    "unit_price"
-    t.integer  "unti_quantity"
+    t.integer  "unit_quantity"
     t.integer  "order_id"
     t.integer  "product_id"
     t.datetime "created_at",    null: false
@@ -83,11 +83,9 @@ ActiveRecord::Schema.define(version: 20170302081546) do
     t.integer  "user_id"
     t.integer  "shop_id"
     t.integer  "discount_id"
-    t.integer  "location_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["discount_id"], name: "index_orders_on_discount_id"
-    t.index ["location_id"], name: "index_orders_on_location_id"
     t.index ["shop_id"], name: "index_orders_on_shop_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
@@ -130,8 +128,6 @@ ActiveRecord::Schema.define(version: 20170302081546) do
     t.string   "phone"
     t.integer  "point"
     t.integer  "membership"
-    t.boolean  "is_admin"
-    t.integer  "location_id"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -144,7 +140,6 @@ ActiveRecord::Schema.define(version: 20170302081546) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["location_id"], name: "index_users_on_location_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
