@@ -1,3 +1,4 @@
 class Staff < ApplicationRecord
-  belongs_to :shop
+  devise :database_authenticatable, :rememberable, :validatable
+  belongs_to :shop, required: false
 end
