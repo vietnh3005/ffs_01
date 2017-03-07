@@ -8,7 +8,6 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :phone
       t.integer :point
       t.integer :membership
-
       t.timestamps
     end
   end

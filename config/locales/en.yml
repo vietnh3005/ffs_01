@@ -45,3 +45,9 @@ en:
     shared:
       links:
         forgot: "Forgot your password?"
+
+  staffs:
+    pages:
+      home:
+        staff_home: "Staffs Central"
+        staff_des: "Homepage of staffs"
