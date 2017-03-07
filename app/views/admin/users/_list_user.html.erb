@@ -1,0 +1,28 @@
+<thead>
+  <tr>
+    <th><%= t "views.admins.form.name" %></th>
+    <th><%= t "views.admins.form.email" %></th>
+    <th><%= t "views.admins.form.address" %></th>
+    <th><%= t "views.admins.form.phone" %></th>
+    <th><%= t "views.admins.form.point" %></th>
+    <th><%= t "views.admins.form.membership" %></th>
+    <th class="action"><%= t "views.admins.form.action" %></th>
+  </tr>
+</thead>
+<tbody>
+  <% @users.each do |user| %>
+    <tr class="background-tr">
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.address %></td>
+      <td><%= user.phone %></td>
+      <td><%= user.point %></td>
+      <td><%= user.membership %></td>
+      <td>
+        <%= link_to admin_user_path(user), method: :delete, remote: :true do %>
+          <i class="fa fa-trash"></i>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</tbody>

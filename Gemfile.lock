@@ -51,6 +51,7 @@ GEM
       will_paginate
     builder (3.2.3)
     byebug (9.0.0)
+    cancancan (1.16.0)
     carrierwave (0.11.2)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -80,6 +81,8 @@ GEM
     erubis (2.7.0)
     excon (0.55.0)
     execjs (2.7.0)
+    faker (1.7.3)
+      i18n (~> 0.5)
     ffi (1.9.17)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
@@ -208,6 +211,8 @@ GEM
     fog-xml (0.1.2)
       fog-core
       nokogiri (~> 1.5, >= 1.5.11)
+    font-awesome-rails (4.7.0.1)
+      railties (>= 3.2, < 5.1)
     formatador (0.2.5)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
@@ -370,11 +375,14 @@ DEPENDENCIES
   bootstrap-sass
   bootstrap-will_paginate
   byebug (= 9.0.0)
+  cancancan (~> 1.10)
   carrierwave (= 0.11.2)
   coffee-rails (~> 4.2)
   config
   devise
+  faker
   fog (= 1.38.0)
+  font-awesome-rails
   guard (= 2.13.0)
   guard-minitest (= 2.4.4)
   jbuilder (~> 2.5)

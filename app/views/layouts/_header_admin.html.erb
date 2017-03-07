@@ -1,0 +1,107 @@
+<div class="header">
+  <div class="container">
+    <div class="logo pull-left">
+    </div>
+    <div class="account pull-right">
+      <div class="username">
+        <%= link_to "#" do %>
+          <span>
+            <%= current_user.name %>
+            <i class="fa fa-caret-down"></i>
+          </span>
+        <% end %>
+      </div>
+      <ul>
+        <li>
+          <%= link_to destroy_user_session_path, method: :delete do %>
+            <i class="fa fa-sign-out"></i>
+            <%= t "views.admins.header.logout" %>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+<div class="menu-header">
+  <div class="container">
+    <ul>
+      <li>
+        <%= link_to "#" do %>
+          <i class="fa fa-home"></i>
+            <%= t "views.admins.header.menu.home" %>
+        <% end %>
+      </li>
+      <li class="<%= "actived" if current_page?(admin_users_path) %>">
+        <%= link_to admin_users_path do %>
+          <i class="fa fa-user"></i>
+            <%= t "views.admins.header.menu.user" %>
+        <% end %>
+      </li>
+      <li class="menu-parent <%= "actived" if current_page?(admin_staffs_path) %>">
+        <%= link_to admin_staffs_path do %>
+          <i class="fa fa-male"></i>
+            <%= t "views.admins.header.menu.staff" %>
+        <% end %>
+        <ul class="menu-childe-staff">
+          <li>
+            <%= link_to "#" do %>
+              <i class="fa fa-male"></i>
+              <%= t "views.admins.header.menu.staff" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to "#" do %>
+              <i class="fa fa-male"></i>
+              <%= t "views.admins.header.menu.staff" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to "#" do %>
+              <i class="fa fa-male"></i>
+              <%= t "views.admins.header.menu.staff" %>
+            <% end %>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <%= link_to "#" do %>
+          <i class="fa fa-cube"></i>
+            <%= t "views.admins.header.menu.product" %>
+        <% end %>
+      </li>
+      <li class="menu-parent">
+        <%= link_to "#" do %>
+          <i class="fa fa-th"></i>
+            <%= t "views.admins.header.menu.category" %>
+        <% end %>
+        <ul class="menu-childe-category">
+          <li>
+            <%= link_to "#" do %>
+              <i class="fa fa-th"></i>
+              <%= t "views.admins.header.menu.category" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to "#" do %>
+              <i class="fa fa-th"></i>
+              <%= t "views.admins.header.menu.category" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to "#" do %>
+              <i class="fa fa-th"></i>
+              <%= t "views.admins.header.menu.category" %>
+            <% end %>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <%= link_to "#" do %>
+          <i class="fa fa-money"></i>
+            <%= t "views.admins.header.menu.order" %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>

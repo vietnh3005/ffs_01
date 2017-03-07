@@ -20,9 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  please: "Please Login!"
   hello: "Hello world"
   welcome: "Welcome to"
-  title_page: "Fasta"
   login: "Login"
   time:
     formats:
@@ -33,7 +33,6 @@ en:
   update: "Update"
   back: "Back"
   edit: "Edit"
-
   users:
     registrations:
       edit:
@@ -45,9 +44,66 @@ en:
     shared:
       links:
         forgot: "Forgot your password?"
-
   staffs:
     pages:
       home:
         staff_home: "Staffs Central"
         staff_des: "Homepage of staffs"
+  views:
+    helpers:
+      base_title: "Fast food store"
+    admins:
+      form:
+        confirm: "Are you sure?"
+        name: "Name"
+        email: "Email"
+        address: "Address"
+        phone: "Phone Number"
+        point: "Point"
+        membership: "Membership"
+        role: "Role"
+        action: "Action"
+        position: "Position"
+      create: "Create"
+      export: "Export"
+      admin_users:
+        show: "List User"
+      admin_products:
+        show: "List Product"
+      admin_shopowners:
+        show: "List Shop Owners"
+      admin_staffs:
+        edit: "Edit staff"
+        new: "Create Staff"
+        show: "List Staff"
+      header:
+        logout: "Logout"
+        menu:
+          home: "Home"
+          staff: "Staff"
+          shop_owners: "Shop Owners"
+          user: "User"
+          product: "Product"
+          category: "Categories"
+          order: "Order"
+      body:
+      footer:
+        copy_right: "2017 Website developed by"
+        name_team: "RUBY TEAM"
+  controllers:
+    admins:
+      product:
+        create_product: "Create product success"
+        update_product: "Product updated"
+        delete_product: "Product deleted"
+      user:
+        create_user: "Create user success"
+        update_user: "User updated"
+        delete_user: "User deleted"
+        user_not_exist: "User not exist"
+      staff:
+        create_staff: "Create staff success"
+        update_staff: "Staff updated"
+        delete_staff: "Staff deleted"
+        staff_not_exist: "Staff not exist"
+        wrong_staff: "Can't delete staff"
