@@ -1,0 +1,34 @@
+<% provide :title, t("views.admins.admin_products.show") %>
+<div class="main-content">
+  <div class="container">
+    <div class="info-manager">
+      <div class="title-manager pull-left">
+        <h2><%= t "views.admins.admin_products.show" %></h2>
+      </div>
+      <div class="button-manager pull-right">
+        <ul>
+          <li>
+            <%= link_to new_admin_product_path do %>
+              <i class="fa fa-plus"></i>
+              <%= t "views.admins.create" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to "#" do %>
+              <i class="glyphicon glyphicon-export"></i>
+              <%= t "views.admins.export" %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <%= render "list_product" %>
+      </table>
+      <div class="pagination">
+      </div>
+    </div>
+  </div>
+</div>

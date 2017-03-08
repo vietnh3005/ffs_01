@@ -1,0 +1,31 @@
+<% provide :title, t("views.admins.admin_products.edit") %>
+<% provide :button_text, t("views.admins.admin_products.edit") %>
+<div class="main-content">
+  <div class="container">
+    <div class="info-manager">
+      <div class="title-manager pull-left">
+        <h2><%= t "views.admins.admin_products.edit" %></h2>
+      </div>
+      <div class="button-manager pull-right">
+        <ul>
+          <li>
+            <%= link_to new_admin_product_path do %>
+              <i class="glyphicon glyphicon-plus"></i>
+              <%= t "views.user.create" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to "#" do %>
+              <i class="glyphicon glyphicon-export"></i>
+              <%= t "views.user.export" %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="form-wrap">
+      <%= render "form" %>
+    </div>
+  </div>
+</div>

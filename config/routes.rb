@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :orders, only: [:index]
     resources :users, only: [:index, :delete]
     resources :staffs, except: [:show]
+    resources :products, except: [:show]
   end
   resources :products, only: [:show, :index]
 end
