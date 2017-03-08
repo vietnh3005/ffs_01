@@ -38,8 +38,8 @@
             <%= t "views.admins.header.menu.user" %>
         <% end %>
       </li>
-      <li class="menu-parent">
-        <%= link_to "#" do %>
+      <li class="menu-parent <%= "actived" if current_page?(admin_staffs_path) %>">
+        <%= link_to admin_staffs_path do %>
           <i class="fa fa-male"></i>
             <%= t "views.admins.header.menu.staff" %>
         <% end %>
@@ -97,7 +97,7 @@
         </ul>
       </li>
       <li>
-        <%= link_to admin_orders_path do %>
+        <%= link_to "#" do %>
           <i class="fa fa-money"></i>
             <%= t "views.admins.header.menu.order" %>
         <% end %>
