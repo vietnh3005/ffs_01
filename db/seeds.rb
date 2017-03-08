@@ -16,4 +16,22 @@ Staff.create! name: "Zwei",
   email: "zwei@gmail.com",
   password: "111111",
   password_confirmation: "111111",
-  position: "1"
+  position: "admin"
+
+Staff.create! name: "Drei",
+  email: "drei@gmail.com",
+  password: "111111",
+  password_confirmation: "111111",
+  position: "owner"
+
+Staff.create! name: "Vier",
+  email: "vier@gmail.com",
+  password: "111111",
+  password_confirmation: "111111",
+  position: "chef"
+
+Staff.create! name: "Funf",
+  email: "funf@gmail.com",
+  password: "111111",
+  password_confirmation: "111111",
+  position: "shipper"

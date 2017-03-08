@@ -3,8 +3,9 @@
     <%= link_to t("title_page"), root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <% if person_signed_in? %>
-          <li><%= link_to current_person.name, "#" %></li>
+        <% if staff_signed_in? %>
+          <li><%= link_to current_staff.name, "#" %></li>
+          <li><%= link_to t("orders"), admin_orders_path %></li>
           <li><%= link_to t("logout"), destroy_staff_session_path, method: :delete %></li>
         <% else %>
           <li><%= link_to t("login"), new_staff_session_path, id: "head" %></li>

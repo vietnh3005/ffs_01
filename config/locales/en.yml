@@ -90,6 +90,22 @@ en:
       footer:
         copy_right: "2017 Website developed by"
         name_team: "RUBY TEAM"
+
+  admin:
+    orders:
+      list_orders:
+        id: "Order ID"
+        rec_name: "Receiver Name"
+        rec_addr: "Receiver Address"
+        rec_phone : "Receiver Phone"
+        status: "Order Status"
+        total: "Total"
+        at: "Created At"
+      index:
+        order_list: "Admin Manage Order"
+        order: "List Order"
+
+
   controllers:
     admins:
       product:
