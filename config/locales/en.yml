@@ -50,6 +50,8 @@ en:
         staff_home: "Staffs Central"
         staff_des: "Homepage of staffs"
   views:
+    errors_contain: "The form contains"
+    error: "error"
     helpers:
       base_title: "Fast food store"
     admins:
@@ -64,18 +66,28 @@ en:
         role: "Role"
         action: "Action"
         position: "Position"
+        image: "Image"
+        price: "Price"
+        status: "Status"
+        description: "Description"
       create: "Create"
       export: "Export"
       admin_users:
         show: "List User"
       admin_products:
         show: "List Product"
+        edit: "Edit Product"
+        new: "Create Product"
       admin_shopowners:
         show: "List Shop Owners"
       admin_staffs:
         edit: "Edit staff"
         new: "Create Staff"
         show: "List Staff"
+      admin_products:
+        edit: "Edit Product"
+        new: "Create Product"
+        show: "List Product"
       header:
         logout: "Logout"
         menu:
@@ -123,6 +135,10 @@ en:
         delete_staff: "Staff deleted"
         staff_not_exist: "Staff not exist"
         wrong_staff: "Can't delete staff"
+      product:
+        create_product: "Create product success"
+        update_product: "Product updated"
+        delete_product: "Product deleted"
   products:
     show:
       available: "Available"

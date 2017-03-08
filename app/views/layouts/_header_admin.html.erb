@@ -64,8 +64,8 @@
           </li>
         </ul>
       </li>
-      <li>
-        <%= link_to "#" do %>
+      <li class="<%= "actived" if current_page?(admin_products_path) %>">
+        <%= link_to admin_products_path do %>
           <i class="fa fa-cube"></i>
             <%= t "views.admins.header.menu.product" %>
         <% end %>

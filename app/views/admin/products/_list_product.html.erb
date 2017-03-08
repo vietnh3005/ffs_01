@@ -1,0 +1,27 @@
+<thead>
+  <tr>
+    <th><%= t "views.admins.form.image" %></th>
+    <th><%= t "views.admins.form.name" %></th>
+    <th><%= t "views.admins.form.price" %></th>
+    <th><%= t "views.admins.form.status" %></th>
+    <th class="action"><%= t "views.admins.form.action" %></th>
+  </tr>
+</thead>
+<tbody>
+  <% @products.each do |product| %>
+    <tr class="background-tr">
+      <td><%= image_tag product.image, class: "size-img-thumbnail" %></td>
+      <td><%= product.name %></td>
+      <td><%= product.price %></td>
+      <td><%= product.status ? t(".available") : t("not_avilable") %></td>
+      <td>
+        <%= link_to edit_admin_product_path product do %>
+          <i class="fa fa-pencil-square"></i>
+        <% end %>
+        <%= link_to admin_product_path(product), method: :delete, remote: :true do %>
+          <i class="fa fa-trash"></i>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</tbody>
