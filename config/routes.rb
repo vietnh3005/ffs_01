@@ -6,7 +6,8 @@ Rails.application.routes.draw do
     get "staffs/pages/*page", to: "staffs/pages#show", page: "home", as: "staff_root"
   end
   namespace :admin do
-    resources :orders
-    resources :users
+    resources :orders, only: [:index]
+    resources :users, only: [:index, :delete]
+    resources :staffs, except: [:show]
   end
 end

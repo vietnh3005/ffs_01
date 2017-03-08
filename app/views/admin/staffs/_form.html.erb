@@ -1,0 +1,57 @@
+<%= form_for [:admin, @staff] do |f| %>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="form-group row">
+        <div class="col-md-4">
+          <%= f.label :name, t("views.admins.form.name"),
+            class: "col-form-label" %>
+        </div>
+        <div class="col-md-6">
+          <%= f.text_field :name, class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-4">
+          <%= f.label :email, t("views.admins.form.email"),
+            class: "col-form-label" %>
+        </div>
+        <div class="col-md-6">
+          <%= f.text_field :email, class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-4">
+          <%= f.label :password, class: "col-form-label" %>
+        </div>
+        <div class="col-md-6">
+          <%= f.password_field :password, class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-4">
+          <%= f.label :password_confirmation,
+            t("views.form.confirmation"), class: "col-form-label" %>
+        </div>
+        <div class="col-md-6">
+          <%= f.password_field :password_confirmation,
+            class: "form-control" %> 
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-4">
+          <%= f.label :position, t("views.admins.form.position"),
+            class: "col-form-label" %>
+        </div>
+        <div class="col-md-6">
+          <%= f.select :position, @position %>
+        </div>
+
+      </div>
+      <div class="form-group">
+        <div class="col-md-6 col-md-offset-4">
+          <%= f.submit yield(:button_text), class: "btn btn-success" %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
