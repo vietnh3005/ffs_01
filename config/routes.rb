@@ -4,10 +4,9 @@ Rails.application.routes.draw do
   root "pages#home", page: "home"
   devise_scope :staff do
     get "staffs/pages/*page", to: "staffs/pages#show", page: "home", as: "staff_root"
-  root "pages#show", page: "home"
   end
-
   namespace :admin do
+    resources :orders
     resources :users
   end
 end

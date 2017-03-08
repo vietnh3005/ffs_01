@@ -48,6 +48,7 @@
 }
 
 #admins {
+  padding-top: 0px;
   background-color: #eeeeee !important;
   .admin {
     .form-control {
@@ -138,11 +139,11 @@
               transition: 0.3s;
               li {
                 display: block;
-                float: none; 
+                float: none;
                 &:hover {
                   background: #38B8E6;
                   transition: 0.3s;
-                } 
+                }
               }
             }
           }
@@ -203,6 +204,7 @@
               font-weight: bold;
               border-bottom: 1px solid #e3e3e3;
               padding: 10px;
+              color: black;
             }
           }
         }

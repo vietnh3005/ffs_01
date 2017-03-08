@@ -4,4 +4,5 @@ class Order < ApplicationRecord
   belongs_to :discount, optional: true
   belongs_to :shop, optional: true
   belongs_to :user, optional: true
+  enum status: [:waiting, :accepted, :rejected, :finished]
 end
