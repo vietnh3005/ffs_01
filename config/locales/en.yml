@@ -113,6 +113,7 @@ en:
         status: "Order Status"
         total: "Total"
         at: "Created At"
+        assign : "Assign"
       index:
         order_list: "Admin Manage Order"
         order: "List Order"
