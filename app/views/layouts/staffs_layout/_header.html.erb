@@ -5,7 +5,13 @@
       <ul class="nav navbar-nav navbar-right">
         <% if staff_signed_in? %>
           <li><%= link_to current_staff.name, "#" %></li>
-          <li><%= link_to t("orders"), admin_orders_path %></li>
+          <% if current_staff.admin! %>
+            <li><%= link_to t("orders"), admin_orders_path %></li>
+          <% elsif current_staff.owner! %>
+            <li><%= link_to t("orders"), admin_orders_path %></li>
+          <% else %>
+            <li><%= link_to t("orders"), "#" %></li>
+          <% end %>
           <li><%= link_to t("logout"), destroy_staff_session_path, method: :delete %></li>
         <% else %>
           <li><%= link_to t("login"), new_staff_session_path, id: "head" %></li>

@@ -1,18 +1,20 @@
 <% provide :title, t(".order_list") %>
-<div class="main-content">
-  <div class="container">
-    <div class="info-manager">
-      <div class="title-manager pull-left">
-        <h2><%= t ".order" %></h2>
+<div id="admins">
+  <div class="main-content">
+    <div class="container">
+      <div class="info-manager">
+        <div class="title-manager pull-left">
+          <h2><%= t ".order" %></h2>
+        </div>
+        <div class="clearfix"></div>
       </div>
-      <div class="clearfix"></div>
-    </div>
-    <div class="table-responsive">
-      <table class="table table-bordered table-hover">
-        <%= render "list_orders" %>
-      </table>
-      <div class="pagination">
-        <%= will_paginate %>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+          <%= render "list_orders" %>
+        </table>
+        <div class="pagination">
+          <%= will_paginate %>
+        </div>
       </div>
     </div>
   </div>

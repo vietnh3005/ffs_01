@@ -4,11 +4,25 @@ class Admin::OrdersController < ApplicationController
   before_action :authenticate_staff!
 
   def index
-    @orders = Order.paginate page: params[:page]
+    @orders = Order.unassign.paginate page: params[:page], per_page: Settings.eight
+    @supports = Supports::Order.new
+  end
+
+  def edit
+  end
+
+  def update
+    if @order.update_attributes order_params
+      flash.now[:success] = t ".update_success"
+      redirect_to root_path
+    else
+      flash.now[:danger] = t ".update_fail"
+    end
   end
 
   private
-  def staff_params
-    params.require(:staff).permit :name, :email, :password, :password_confirmation, :position
+  def order_params
+    params.require(:order).permit :shop_id, :rec_name, :rec_addr, :rec_phone,
+      :status, :total
   end
 end

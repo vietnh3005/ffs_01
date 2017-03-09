@@ -104,9 +104,13 @@ ActiveRecord::Schema.define(version: 20170306015636) do
     t.string   "name"
     t.string   "address"
     t.integer  "location_id"
+    t.integer  "order_id"
+    t.integer  "staff_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["location_id"], name: "index_shops_on_location_id"
+    t.index ["order_id"], name: "index_shops_on_order_id"
+    t.index ["staff_id"], name: "index_shops_on_staff_id"
   end
 
   create_table "staffs", force: :cascade do |t|
