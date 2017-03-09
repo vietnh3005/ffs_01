@@ -1,5 +1,5 @@
 class Location < ApplicationRecord
-  has_many :locations
+  acts_as_tree
 
-  belongs_to :shop
+  has_many :shops
 end

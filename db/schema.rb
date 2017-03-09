@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170306015636) do
+ActiveRecord::Schema.define(version: 20170309072805) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -55,8 +55,17 @@ ActiveRecord::Schema.define(version: 20170306015636) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "location_hierarchies", id: false, force: :cascade do |t|
+    t.integer "ancestor_id",   null: false
+    t.integer "descendant_id", null: false
+    t.integer "generations",   null: false
+    t.index ["ancestor_id", "descendant_id", "generations"], name: "location_anc_desc_udx", unique: true
+    t.index ["descendant_id"], name: "location_desc_idx"
+  end
+
   create_table "locations", force: :cascade do |t|
     t.string   "name"
+    t.integer  "parent_id"
     t.integer  "location_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
