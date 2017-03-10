@@ -52,10 +52,17 @@ en:
   views:
     errors_contain: "The form contains"
     error: "error"
+    search: "Search"
+    input:
+      value: "Input value"
     helpers:
       base_title: "Fast food store"
     admins:
       form:
+        product:
+          name: "Name Product"
+        category:
+          name: "Name Category"
         confirm: "Are you sure?"
         name: "Name"
         email: "Email"
@@ -74,10 +81,6 @@ en:
       export: "Export"
       admin_users:
         show: "List User"
-      admin_products:
-        show: "List Product"
-        edit: "Edit Product"
-        new: "Create Product"
       admin_shopowners:
         show: "List Shop Owners"
       admin_staffs:
@@ -88,6 +91,10 @@ en:
         edit: "Edit Product"
         new: "Create Product"
         show: "List Product"
+      admin_categories:
+        edit: "Edit Category"
+        new: "Create Category"
+        show: "List Category"
       header:
         logout: "Logout"
         menu:

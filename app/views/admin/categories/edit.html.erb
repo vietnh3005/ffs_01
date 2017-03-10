@@ -1,0 +1,28 @@
+<% provide :title, t("views.admins.admin_categories.edit") %>
+<div class="main-content">
+  <div class="container">
+    <div class="info-manager">
+      <div class="title-manager pull-left">
+        <h2><%= t "views.admins.admin_categories.edit" %></h2>
+      </div>
+      <div class="button-manager pull-right">
+        <ul>
+          <li>
+            <%= link_to admin_categories_path(format: "xls") do %>
+              <i class="glyphicon glyphicon-export"></i>
+              <%= t "views.user.export" %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="form-wrap">
+      <div class="row">
+        <div class="col-md-9 col-md-offset-3">
+          <%= render "form", button_to: t("views.admins.admin_categories.edit") %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

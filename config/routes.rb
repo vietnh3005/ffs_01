@@ -7,9 +7,10 @@ Rails.application.routes.draw do
   end
   namespace :admin do
     resources :orders, only: [:index, :edit, :update]
-    resources :users, only: [:index, :delete]
+    resources :users, only: [:index, :destroy]
     resources :staffs, except: [:show]
     resources :products, except: [:show]
+    resources :categories, except: [:show]
   end
 
   resources :products, only: [:show, :index]

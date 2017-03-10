@@ -2,4 +2,4 @@ zero: 0
 one: 1
 weight: 550
 height: 436
-pag_pages: 8
+orders_per_page: 8
