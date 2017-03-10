@@ -3,9 +3,9 @@ class Ability
 
   def initialize staff
     if staff.class == Staff
-      if staff.position == "admin"
+      if staff.admin?
         can :manage, :all
-      elsif staff.position == "owner"
+      elsif staff.owner?
         can :read, Staff
         can :manage, Order
       else

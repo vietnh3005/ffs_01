@@ -114,10 +114,10 @@ en:
         total: "Total"
         at: "Created At"
         assign : "Assign"
+        take : "Take"
       index:
-        order_list: "Admin Manage Order"
-        order: "List Order"
-
+        order_list: "Manage Order"
+        order: "Unassigned Order"
 
   controllers:
     admins:
