@@ -1,0 +1,32 @@
+<thead>
+  <tr>
+    <th><%= t "views.admins.form.product.name" %></th>
+    <th><%= t "views.admins.form.category.name" %></th>
+    <th class="action"></th>
+  </tr>
+</thead>
+<tbody>
+  <% @categories.each do |category| %>
+    <tr class="background-tr">
+      <td>
+        <ul class="text-left">
+          <% category.products.each do |product| %>
+            <%= link_to admin_products_path do %>
+              <li><%= product.name %></li>
+            <% end %>
+          <% end %>
+        </ul>
+      </td>
+      <td><%= category.name %></td>
+      <td>
+        <%= link_to edit_admin_category_path category do %>
+          <i class="fa fa-pencil-square"></i>
+        <% end %>
+        <%= link_to admin_category_path(category), method: :delete,
+          data: {confirm: t("views.admins.form.confirm")}, remote: true do %>
+          <i class="fa fa-trash"></i>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</tbody>
