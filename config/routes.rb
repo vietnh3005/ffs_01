@@ -12,10 +12,5 @@ Rails.application.routes.draw do
     resources :products, except: [:show]
   end
 
-  get "owners/*page", to: "owners/pages#show", page: "home", as: "owner_root"
-  namespace :owners do
-    resources :orders, only: [:index, :update]
-  end
-
   resources :products, only: [:show, :index]
 end

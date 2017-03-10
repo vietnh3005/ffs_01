@@ -1,10 +1,10 @@
 class Admin::OrdersController < ApplicationController
+  before_action :authenticate_staff!
   layout "application_admin"
   load_and_authorize_resource
-  before_action :authenticate_staff!
 
   def index
-    @orders = Order.unassign.paginate page: params[:page], per_page: Settings.eight
+    @orders = Order.unassign.paginate page: params[:page], per_page: Settings.pag_pages
     @supports = Supports::Order.new
   end
 
@@ -22,7 +22,6 @@ class Admin::OrdersController < ApplicationController
 
   private
   def order_params
-    params.require(:order).permit :shop_id, :rec_name, :rec_addr, :rec_phone,
-      :status, :total
+    params.require(:order).permit :shop_id, :status
   end
 end

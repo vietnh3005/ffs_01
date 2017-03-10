@@ -22,7 +22,8 @@ Staff.create! name: "Drei",
   email: "drei@gmail.com",
   password: "111111",
   password_confirmation: "111111",
-  position: "owner"
+  position: "owner",
+  shop_id: "1"
 
 Staff.create! name: "Vier",
   email: "vier@gmail.com",
