@@ -16,7 +16,8 @@
         <%= link_to edit_admin_staff_path staff do %>
           <i class="fa fa-pencil-square"></i>
         <% end %>
-        <%= link_to admin_staff_path(staff), method: :delete, remote: :true do %>
+        <%= link_to admin_staff_path(staff), method: :delete,
+          data: {confirm: t("views.admins.form.confirm")}, remote: :true do %>
           <i class="fa fa-trash"></i>
         <% end %>
       </td>

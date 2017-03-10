@@ -19,7 +19,8 @@
       <td><%= user.point %></td>
       <td><%= user.membership %></td>
       <td>
-        <%= link_to "#", method: :delete, remote: :true do %>
+        <%= link_to admin_user_path(user), method: :delete,
+          data: {confirm: t("views.admins.form.confirm")}, remote: true do %>
           <i class="fa fa-trash"></i>
         <% end %>
       </td>

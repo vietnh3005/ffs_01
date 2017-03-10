@@ -1,4 +1,6 @@
 class Product < ApplicationRecord
+  scope :sort_by_create_at, -> {order created_at: :desc}
+
   has_many :categories, through: :category_products
   has_many :category_products, dependent: :destroy
   has_many :combos, through: :combo_products

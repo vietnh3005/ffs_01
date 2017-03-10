@@ -3,9 +3,10 @@ class Admin::ProductsController < ApplicationController
   load_and_authorize_resource
   
   before_action :authenticate_staff!
+  before_action :load_data, only: [:index, :new, :edit]
 
   def index
-    @products = Product.paginate page: params[:page]
+    @products = Product.sort_by_create_at.paginate page: params[:page]
   end
 
   def new
@@ -17,6 +18,7 @@ class Admin::ProductsController < ApplicationController
       flash[:success] = t "controllers.admins.product.create_product"
       redirect_to admin_products_path
     else
+      load_data
       render :new
     end
   end
@@ -29,6 +31,7 @@ class Admin::ProductsController < ApplicationController
       redirect_to admin_products_path
       flash[:success] = t "controllers.admins.product.update_product"
     else
+      load_data
       render :edit
     end
   end
@@ -44,8 +47,12 @@ class Admin::ProductsController < ApplicationController
   end
 
   private
-
   def product_params
-    params.require(:product).permit :name, :description, :price, :status, :image
+    params.require(:product).permit :name, :description, :price, :status, :image,
+      :category_ids
+  end
+
+  def load_data
+    @supports = Supports::Relationship.new
   end
 end

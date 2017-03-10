@@ -47,6 +47,12 @@
   }
 }
 
+#search {
+  padding: 6px 0;
+  border: 1px solid #4cae4c;
+  border-radius: 10px;
+}
+
 #admins {
   padding-top: 0px;
   background-color: #eeeeee !important;
@@ -212,8 +218,6 @@
         background: #fff;
         padding: 30px;
         box-shadow: 0 5px 12px -5px rgba(0, 0, 0, 0.5);
-        -webkit-box-shadow: 0 5px 12px -5px rgba(0, 0, 0, 0.5);
-        -moz-box-shadow: 0 5px 12px -5px rgba(0, 0, 0, 0.5);
       }
     }
     .info-manager {
@@ -249,48 +253,6 @@
           }
         }
       }
-    }
-    .size-img-modal {
-      height: 100%;
-      width: 160px;
-      padding: 8px 0;
-      margin: 0 0 0 50px;
-    }
-    .info-book {
-      p {
-        text-align: left;
-        margin: 0;
-        padding: 5px 12px;
-        a {
-          color: red;
-          text-decoration: none;
-          &:hover {
-            color: #38B8E6;
-            text-decoration: none;
-          }
-        }
-      }
-    }
-    .info-author {
-      p {
-        text-align: left;
-        margin: 0;
-        padding: 5px 0;
-        a {
-          color: red;
-          text-decoration: none;
-          &:hover {
-            color: #38B8E6;
-            text-decoration: none;
-          }
-        }
-      }
-    }
-    .size-img-author {
-      height: 100%;
-      width: 160px;
-      padding: 8px 0;
-      margin: 0 20px;
     }
     #error_explanation {
       color: red;

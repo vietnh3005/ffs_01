@@ -38,31 +38,11 @@
             <%= t "views.admins.header.menu.user" %>
         <% end %>
       </li>
-      <li class="menu-parent <%= "actived" if current_page?(admin_staffs_path) %>">
+      <li class="<%= "actived" if current_page?(admin_staffs_path) %>">
         <%= link_to admin_staffs_path do %>
           <i class="fa fa-male"></i>
             <%= t "views.admins.header.menu.staff" %>
         <% end %>
-        <ul class="menu-childe-staff">
-          <li>
-            <%= link_to "#" do %>
-              <i class="fa fa-male"></i>
-              <%= t "views.admins.header.menu.staff" %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to "#" do %>
-              <i class="fa fa-male"></i>
-              <%= t "views.admins.header.menu.staff" %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to "#" do %>
-              <i class="fa fa-male"></i>
-              <%= t "views.admins.header.menu.staff" %>
-            <% end %>
-          </li>
-        </ul>
       </li>
       <li class="<%= "actived" if current_page?(admin_products_path) %>">
         <%= link_to admin_products_path do %>
@@ -70,31 +50,11 @@
             <%= t "views.admins.header.menu.product" %>
         <% end %>
       </li>
-      <li class="menu-parent">
-        <%= link_to "#" do %>
+      <li class="<%= "actived" if current_page?(admin_categories_path) %>">
+        <%= link_to admin_categories_path do %>
           <i class="fa fa-th"></i>
             <%= t "views.admins.header.menu.category" %>
         <% end %>
-        <ul class="menu-childe-category">
-          <li>
-            <%= link_to "#" do %>
-              <i class="fa fa-th"></i>
-              <%= t "views.admins.header.menu.category" %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to "#" do %>
-              <i class="fa fa-th"></i>
-              <%= t "views.admins.header.menu.category" %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to "#" do %>
-              <i class="fa fa-th"></i>
-              <%= t "views.admins.header.menu.category" %>
-            <% end %>
-          </li>
-        </ul>
       </li>
       <li>
         <%= link_to admin_orders_path do %>
