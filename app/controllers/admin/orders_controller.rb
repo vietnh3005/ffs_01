@@ -4,7 +4,8 @@ class Admin::OrdersController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @orders = Order.unassign.paginate page: params[:page], per_page: Settings.pag_pages
+    @orders = Order.sort_by_create_at.unassign.paginate page: params[:page],
+      per_page: Settings.orders_per_page
     @supports = Supports::Order.new
   end
 

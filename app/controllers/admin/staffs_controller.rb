@@ -6,7 +6,7 @@ class Admin::StaffsController < ApplicationController
   before_action :load_position_staff, only: [:new, :edit]
 
   def index
-    @staffs = Staff.paginate page: params[:page]
+    @staffs = Staff.sort_by_create_at.paginate page: params[:page]
   end
 
   def new

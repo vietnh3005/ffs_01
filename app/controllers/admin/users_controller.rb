@@ -5,7 +5,7 @@ class Admin::UsersController < ApplicationController
   before_action :authenticate_staff!
 
   def index
-    @users = User.paginate page: params[:page]
+    @users = User.sort_by_create_at.paginate page: params[:page]
   end
 
   def destroy
