@@ -1,16 +1,33 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <%= link_to t("title_page"), root_path, id: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
-          <li><%= link_to current_user.name, edit_user_registration_path %></li>
-          <li><%= link_to t("logout"), destroy_user_session_path, method: :delete %></li>
-        <% else %>
-          <li><%= link_to t("signup"), new_user_registration_path, id: "head" %></li>
-          <li><%= link_to t("login"), new_user_session_path, id: "head" %></li>
+<header class="navbar navbar-inverse navbar-fixed-top wet-asphalt">
+  <div class="top-bar clearfix">
+   <div class="line clearfix"></div>
+      <div class="container">
+      </div>
+  </div>
+  <div class="container mainheader ">
+    <div class="navbar-header">
+      <span class="navbar-brand">
+        <%= link_to root_path do %>
+          <%= image_tag "logo", class: "logo-com" %>
         <% end %>
+      </span>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul id="main-menu" class="nav navbar-nav navbar-right">
+        <li><%= link_to t(".about_us"),products_path %></li>
+        <li class="divider"></li>
+        <li><%= link_to t(".menu"),root_path %></li>
+        <li class="divider"></li>
+        <li><%= link_to t(".membership"),root_path %></li>
+        <li class="divider"></li>
+        <li><%= link_to t(".promotions"),root_path %></li>
+        <li class="divider"></li>
+        <li><%= link_to t(".carrer"),root_path %></li>
+        <li class="divider"></li>
+        <li><%= link_to t(".new"),root_path %></li>
+        <li class="divider"></li>
+        <li ><%= link_to t(".contact_us"),root_path %></li>
       </ul>
-    </nav>
+    </div>
   </div>
 </header>

@@ -1,5 +1,34 @@
-<footer class="footer-distributed">
-  <small>
-    <p> &copy; <%= l Date.today %> <%= t "framgia" %></p>
-  </small>
+<footer id="footer">
+  <div id="bottom" class="footer-pc">
+    <div clas="clearfix"></div>
+    <div class="footer_top">
+      <%= image_tag "bottom_image" %>
+    </div>
+    <div clas="clear"></div>
+    <div class="footer_terms">
+      <div class="footer_terms_wrapper container">
+        <div class="terms_left">
+          <ul>
+            <li><%= link_to t(".general"), root_path %></li>
+            <li><%= link_to t(".operation"), root_path %></li>
+            <li>
+              <%= link_to t(".policy"), root_path %>
+            </li>
+            </ul>
+        </div>
+        <div class="terms_right">
+          <br>
+          <p class="company_name"><%= t ".company_name" %></p>
+          <p><%= t ".company_address" %></p>
+          <p><%= t ".company_phone" %></p>
+          <p><%= link_to t(".company_email"),"#" %></p>
+          <br>
+        </div>
+      </div>
+    </div>
+    <div class="fb_wrap">
+      <div class="container">
+      </div>
+    </div>
+  </div>
 </footer>
