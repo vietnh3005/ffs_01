@@ -1,0 +1,78 @@
+#staff_login{
+
+  background-image: image-url("/assets/1.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    overflow: hidden;
+  }
+
+  /* Form Login 2 */
+  .form-login2 {
+    width: 300px;
+    margin: 170px auto;
+    z-index: 99999 !important;
+    position: relative;
+  }
+  .form-login2 h1 {
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .form-login2 h3 {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 40px;
+  }
+  .form-login2 p {
+    color: #ecf0f1;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .form-login2 .form {
+    background: rgba(255,255,255,0.3);
+    padding: 40px 20px;
+    border-radius: 5px;
+  }
+  .form-control2 {
+    border: none;
+    border-left: 2px solid #3598dc;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    transition: 0.3s;
+  }
+  .form-control2:focus {
+    outline: 0;
+    border-left: 10px solid #3598dc;
+  }
+  .bottom {
+    margin-top: 20px;
+  }
+  .bottom .btn2 {
+    float: right;
+    padding: 10px 14px;
+    border: none;
+    background: #3598dc;
+    border-left: 3px solid #2a80b9;
+    color: #fff;
+    transition: 0.5s;
+  }
+  .btn2:hover {
+    cursor: pointer;
+  }
+  .bottom .check {
+    background: #fff !important;
+  }
+}

@@ -1,27 +1,31 @@
 <% provide :title, t("login") %>
-<h2><%= t "login" %></h2>
+  <div class="form-login2">
+    <h1>Staff login</h1>
+    <%= form_for resource, as: resource_name, url: session_path(resource_name),
+      :class =>"form" do |f| %>
+      <h3>Sign in to your account</h3>
+      <div class="field">
+        <%= f.label :email %><br/>
+        <%= f.email_field :email,:class =>"form-control2", autofocus: true %>
+      </div>
 
-<%= form_for resource, as: resource_name, url: session_path(resource_name) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br/>
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+      <div class="field">
+        <%= f.label :password %><br/>
+        <%= f.password_field :password,:class =>"form-control2", autocomplete: "off" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :password %><br/>
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <div class="bottom">
+        <% if devise_mapping.rememberable? %>
+          <div class="field">
+            <%= f.check_box :remember_me,:class =>"check"  %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end %>
+        <div class="actions">
+          <%= f.submit t("login"), :class => "btn2" %>
+        </div>
+      <% end %>
+      </div>
+      <%= render "staffs/shared/links" %>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit t("login") %>
   </div>
-<% end %>
-
-<%= render "staffs/shared/links" %>
