@@ -33,6 +33,27 @@ en:
   update: "Update"
   back: "Back"
   edit: "Edit"
+  layouts:
+    header:
+      about_us: "About Us"
+      menu: "Menu"
+      membership: "Membership"
+      promotions: "Promotions"
+      career: "Career"
+      new: "New"
+      contact_us: "Contact Us"
+      login: "Login"
+      logout: "Logout"
+    footer:
+      general: "General terms and conditions"
+      operation: "Operation policy"
+      policy: "Policy on information confidentiality"
+      company_name: "Viet Nam Joint Venture Company Ltd."
+      company_address: "292 Ba Trieu st., Le Dai Hanh ward, Hai Ba Trung dist., Ha Noi"
+      company_phone: "Tel office: (08) 38489828 - Tax: 0100773885"
+      company_email: "Email: fastfood@gmail.com"
+    banner:
+      find_restaurant: "Find the nearest restaurant"
   users:
     registrations:
       edit:
