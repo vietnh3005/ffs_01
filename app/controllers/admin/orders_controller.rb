@@ -4,7 +4,13 @@ class Admin::OrdersController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @orders = Order.sort_by_create_at.unassign.paginate page: params[:page],
+    @orders = if params[:assign]
+      Order.assign
+    elsif params[:unassign]
+      Order.unassign
+    else
+      Order
+    end.sort_by_create_at.paginate page: params[:page],
       per_page: Settings.orders_per_page
     @supports = Supports::Order.new
   end
@@ -15,7 +21,7 @@ class Admin::OrdersController < ApplicationController
   def update
     if @order.update_attributes order_params
       flash.now[:success] = t ".update_success"
-      redirect_to root_path
+      redirect_to :back
     else
       flash.now[:danger] = t ".update_fail"
     end

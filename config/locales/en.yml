@@ -59,6 +59,7 @@ en:
       base_title: "Fast food store"
     admins:
       form:
+        shop_id: "Shop ID"
         product:
           name: "Name Product"
         category:
@@ -105,6 +106,8 @@ en:
           product: "Product"
           category: "Categories"
           order: "Order"
+          unassign: "Unassigned"
+          assign: "Assigned"
       body:
       footer:
         copy_right: "2017 Website developed by"
@@ -125,6 +128,7 @@ en:
       index:
         order_list: "Manage Order"
         order: "Unassigned Order"
+        order_assign: "Assigned Order"
 
   controllers:
     admins:

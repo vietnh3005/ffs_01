@@ -8,5 +8,6 @@ class Order < ApplicationRecord
 
   enum status: [:waiting, :accepted, :rejected, :finished]
   scope :unassign, -> {where shop_id: nil}
+  scope :assign, -> {where.not shop_id: nil}
   scope :sort_by_create_at, -> {order created_at: :desc}
 end

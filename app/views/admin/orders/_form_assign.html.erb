@@ -1,0 +1,22 @@
+<thead>
+  <tr>
+    <th><%= t "admin.orders.list_orders.rec_name" %></th>
+    <th><%= t "admin.orders.list_orders.rec_addr" %></th>
+    <th><%= t "admin.orders.list_orders.rec_phone" %></th>
+    <th><%= t "admin.orders.list_orders.status" %></th>
+    <th><%= t "admin.orders.list_orders.total" %></th>
+    <th><%= t "admin.orders.list_orders.at" %></th>
+  </tr>
+</thead>
+<tbody>
+  <% @orders.each do |order| %>
+    <tr class="background-tr">
+      <td><%= order.rec_name %></td>
+      <td><%= order.rec_addr %></td>
+      <td><%= order.rec_phone %></td>
+      <td><%= order.status %></td>
+      <td><%= number_to_currency order.total %></td>
+      <td><%= order.created_at.strftime(t "time.formats.date") %></td>
+    </tr>
+  <% end %>
+</tbody>

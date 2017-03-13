@@ -1,20 +1,31 @@
-<% provide :title, t(".order_list") %>
-<div id="admins">
-  <div class="main-content">
-    <div class="container">
-      <div class="info-manager">
-        <div class="title-manager pull-left">
-          <h2><%= t ".order" %></h2>
-        </div>
-        <div class="clearfix"></div>
+<% if params[:unassign] %>
+  <% provide :title, t(".order") %>
+<% elsif params[:assign] %>
+  <% provide :title, t(".order_assign") %>
+<% else %>
+  <% provide :title, t(".order_list") %>
+<% end %>
+  <% provide :title, t(".order_list") %>
+<div class="main-content">
+  <div class="container">
+    <div class="info-manager">
+      <div class="title-manager pull-left">
+        <% if params[:unassign] %>
+        <h2><%= t ".order" %></h2>
+        <% elsif params[:assign] %>
+        <h2><%= t ".order_assign" %></h2>
+        <% else %>
+        <h2><%= t ".order_list" %></h2>
+        <% end %>
       </div>
-      <div class="table-responsive">
-        <table class="table table-bordered table-hover">
-          <%= render "list_orders" %>
-        </table>
-        <div class="pagination">
-          <%= will_paginate %>
-        </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <%= render "list_orders" %>
+      </table>
+      <div class="pagination">
+        <%= will_paginate %>
       </div>
     </div>
   </div>
