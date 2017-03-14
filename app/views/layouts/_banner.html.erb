@@ -5,20 +5,8 @@
         data-ride="carousel">
         <div class="carousel slide wet-asphalt">
           <ol class="carousel-indicators">
-            <% @discounts.each_with_index do |discount, i| %>
-              <li data-target="#mycarousel" data-slide-to=#{i)
-                class="#{'active' if i == 0}">
-              </li>
-            <% end %>
           </ol>
           <div class="carousel-inner">
-            <% @discounts.each_with_index do |discount, i| %>
-              <div class="item #{'active' if i == 0}">
-                <%= link_to root_path do%>
-                  <%= image_tag "index" %>
-                <% end %>
-              </div>
-            <% end %>
           </div>
         </div>
       </div>

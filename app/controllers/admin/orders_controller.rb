@@ -15,7 +15,7 @@ class Admin::OrdersController < ApplicationController
   def update
     if @order.update_attributes order_params
       flash.now[:success] = t ".update_success"
-      redirect_to root_path
+      redirect_to :back
     else
       flash.now[:danger] = t ".update_fail"
     end

@@ -147,6 +147,34 @@ en:
         order_list: "Manage Order"
         order: "Unassigned Order"
 
+    discounts:
+      index:
+        show: "Discount"
+        create: "Create"
+        export: "Export"
+      list_discount:
+        title: "Title"
+        description: "Description"
+        value: "Value"
+        start: "Started From"
+        end: "End At"
+        acitve: "Active?"
+        action: "Action"
+
+      discount:
+        confirm: "Are you sure?"
+      form:
+        title: "Title"
+        description: "Description"
+        value: "Value"
+        start: "Started From"
+        end: "End At"
+        acitve: "Active?"
+        create: "Create"
+      new:
+        new: "New Discount"
+
+
   controllers:
     admins:
       product:
@@ -168,6 +196,11 @@ en:
         create_product: "Create product success"
         update_product: "Product updated"
         delete_product: "Product deleted"
+      discount:
+        update_success: "Update successed"
+        update_fail: "Update failed"
+        delete_discount: "Deleted!"
+        create_discount: "Created!"
   products:
     show:
       available: "Available"

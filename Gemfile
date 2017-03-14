@@ -21,6 +21,7 @@ gem "devise"
 gem "font-awesome-rails"
 gem "faker"
 gem "cancancan", "~> 1.10"
+gem "bootstrap-datepicker-rails"
 
 group :development, :test do
   gem "sqlite3", "1.3.12"

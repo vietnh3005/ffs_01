@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :staffs, except: [:show]
     resources :products, except: [:show]
     resources :categories, except: [:show]
+    resources :discounts
   end
 
   resources :products, only: [:show, :index]

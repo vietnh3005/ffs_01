@@ -1,0 +1,17 @@
+<tr class="background-tr">
+  <td><%= discount.title %></td>
+  <td><%= discount.description %></td>
+  <td><%= discount.dis_value %></td>
+  <td><%= discount.date_start %></td>
+  <td><%= discount.date_end %></td>
+  <td><%= discount.active %></td>
+  <td>
+    <%= link_to edit_admin_discount_path discount do %>
+      <i class="fa fa-pencil-square"></i>
+    <% end %>
+    <%= link_to admin_discount_path(discount), method: :delete,
+      data: {confirm: t(".confirm")}, remote: :true do %>
+      <i class="fa fa-trash"></i>
+    <% end %>
+  </td>
+</tr>
