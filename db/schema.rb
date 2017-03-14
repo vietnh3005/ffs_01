@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 20170309072805) do
     t.float    "dis_value"
     t.date     "date_start"
     t.date     "date_end"
-    t.boolean  "active"
+    t.integer  "status"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

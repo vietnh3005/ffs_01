@@ -11,7 +11,7 @@
     <tr class="background-tr">
       <td><%= staff.name %></td>
       <td><%= staff.email %></td>
-      <td><%= staff.position %></td>
+      <td><%= t "views.admins.form.#{staff.position}" %></td>
       <td>
         <%= link_to edit_admin_staff_path staff do %>
           <i class="fa fa-pencil-square"></i>
