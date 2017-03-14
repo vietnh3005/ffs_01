@@ -1,0 +1,25 @@
+<% provide :title, t(".new") %>
+<% provide :button_text, t(".new") %>
+<div class="main-content">
+  <div class="container">
+    <div class="info-manager">
+      <div class="title-manager pull-left">
+        <h2><%= t ".new" %></h2>
+      </div>
+      <div class="button-manager pull-right">
+        <ul>
+          <li>
+            <%= link_to "#" do %>
+              <i class="glyphicon glyphicon-export"></i>
+              <%= t "views.user.export" %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="form-wrap">
+      <%= render "form" %>
+    </div>
+  </div>
+</div>

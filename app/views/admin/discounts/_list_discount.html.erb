@@ -1,0 +1,16 @@
+<thead>
+  <tr>
+    <th><%= t ".title" %></th>
+    <th><%= t ".decription" %></th>
+    <th><%= t ".value" %></th>
+    <th><%= t ".start" %></th>
+    <th><%= t ".end" %></th>
+    <th><%= t ".active" %></th>
+    <th class="action"><%= t ".action" %></th>
+  </tr>
+</thead>
+<tbody>
+  <% @discounts.each do |discount| %>
+    <%= render discount %>
+  <% end %>
+</tbody>

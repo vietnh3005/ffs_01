@@ -47,10 +47,12 @@ ActiveRecord::Schema.define(version: 20170309072805) do
   end
 
   create_table "discounts", force: :cascade do |t|
+    t.string   "title"
     t.string   "description"
     t.float    "dis_value"
     t.date     "date_start"
     t.date     "date_end"
+    t.boolean  "active"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
