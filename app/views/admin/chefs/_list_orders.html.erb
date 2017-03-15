@@ -1,0 +1,42 @@
+<thead>
+  <tr>
+    <th><%= t ".rec_name" %></th>
+    <th><%= t ".rec_addr" %></th>
+    <th><%= t ".rec_phone" %></th>
+    <th><%= t ".status" %></th>
+    <th><%= t ".total" %></th>
+    <th><%= t ".at" %></th>
+    <% if current_staff.admin? %>
+      <th><%= t ".assign" %></th>
+      <th></th>
+    <% elsif current_staff.owner? %>
+      <th></th>
+    <% end %>
+  </tr>
+</thead>
+<tbody>
+  <% @orders.each do |order| %>
+    <tr>
+      <td><%= order.rec_name %></td>
+      <td><%= order.rec_addr %></td>
+      <td><%= order.rec_phone %></td>
+      <td><%= t order.status %></td>
+      <td><%= number_to_currency order.total %></td>
+      <td><%= l order.created_at, format: :date %></td>
+      <% if current_staff.admin? %>
+        <%= form_for [:admin, order] do |f| %>
+          <td><%= f.select :shop_id, @supports.shops.collect{|key| [key.name, key.id]},
+            class: "form-control" %></td>
+          <td><%= f.submit t(".assign"), class: "btn btn-primary" %></td>
+        <% end %>
+      <% elsif current_staff.owner? %>
+        <%= form_for [:admin, order] do |f| %>
+          <%= f.hidden_field :shop_id, value: current_staff.shop_id %>
+          <td><%= f.submit t(".take"), class: "btn btn-success" %></td>
+        <% end %>
+      <% else %>
+        <td></td>
+      <% end %>
+    </tr>
+  <% end %>
+</tbody>

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :products, except: [:show]
     resources :categories, except: [:show]
     resources :discounts
+    resources :chefs, only: [:index, :edit, :update]
   end
 
   resources :products, only: [:show, :index]
