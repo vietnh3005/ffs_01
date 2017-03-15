@@ -152,15 +152,10 @@
               }
             }
           }
-          .menu-childe-category {
-            left: 383px;
+          .menu-childe-order {
             position: absolute;
-            top: 104px;
-          }
-          .menu-childe-staff {
-            left: 228px;
-            position: absolute;
-            top: 104px;
+            top: 100%;
+            left: 0;
           }
           ul {
             display: none;
@@ -174,6 +169,7 @@
           padding: 12px 10px;
           border-left: 1px solid #e3e3e3;
           float: left;
+          position: relative;
           &.actived {
             background: #1A9DCC;
             transition: 0.3s;

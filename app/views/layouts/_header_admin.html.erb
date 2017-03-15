@@ -56,11 +56,25 @@
             <%= t "views.admins.header.menu.category" %>
         <% end %>
       </li>
-      <li>
-        <%= link_to admin_orders_path do %>
+      <li class="menu-parent <%= "actived" if current_page?(admin_orders_path) %>">
+        <%= link_to admin_orders_path(order: "order") do %>
           <i class="fa fa-money"></i>
             <%= t "views.admins.header.menu.order" %>
         <% end %>
+        <ul class="menu-childe-order">
+          <li>
+            <%= link_to admin_orders_path(unassign: "unassign") do %>
+              <i class="fa fa-first-order"></i>
+              <%= t "views.admins.header.menu.unassign" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to admin_orders_path(assign: "assign") do %>
+              <i class="fa fa-first-order"></i>
+              <%= t "views.admins.header.menu.assign" %>
+            <% end %>
+          </li>
+        </ul>
       </li>
       <li>
         <%= link_to admin_discounts_path do %>

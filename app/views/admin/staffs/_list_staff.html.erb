@@ -3,6 +3,7 @@
     <th><%= t "views.admins.form.name" %></th>
     <th><%= t "views.admins.form.email" %></th>
     <th><%= t "views.admins.form.position" %></th>
+    <th><%= t "views.admins.form.shop_id" %></th>
     <th class="action"><%= t "views.admins.form.action" %></th>
   </tr>
 </thead>
@@ -12,6 +13,7 @@
       <td><%= staff.name %></td>
       <td><%= staff.email %></td>
       <td><%= staff.position %></td>
+      <td><%= staff.shop_id %></td>
       <td>
         <%= link_to edit_admin_staff_path staff do %>
           <i class="fa fa-pencil-square"></i>
