@@ -44,6 +44,6 @@ class Admin::DiscountsController < ApplicationController
   private
   def discount_params
     params.require(:discount).permit :description, :dis_value,
-      :date_start, :date_end, :title
+      :date_start, :date_end, :title, :status
   end
 end
