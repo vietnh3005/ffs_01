@@ -4,7 +4,7 @@
   <td><%= discount.dis_value %></td>
   <td><%= discount.date_start %></td>
   <td><%= discount.date_end %></td>
-  <td><%= discount.active %></td>
+  <td class=<%= Settings.discount.status.send discount.status  %>><%= t ".#{discount.status}" %></td>
   <td>
     <%= link_to edit_admin_discount_path discount do %>
       <i class="fa fa-pencil-square"></i>

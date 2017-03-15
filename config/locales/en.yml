@@ -26,13 +26,19 @@ en:
   login: "Login"
   time:
     formats:
-      date: "%d-%m-%y"
+      date: "%d/%m/%Y"
   home: "Home"
   framgia: "Framgia"
   signup: "Sign up"
   update: "Update"
   back: "Back"
   edit: "Edit"
+
+  waiting: "Waiting"
+  accepted: "Accepted"
+  rejected: "Rejected"
+  finished: "Finished"
+
   layouts:
     header:
       about_us: "About Us"
@@ -99,6 +105,10 @@ en:
         price: "Price"
         status: "Status"
         description: "Description"
+        admin: "Admin"
+        owner: "Shop Owner"
+        chef: "Chef"
+        shipper: "Shipper"
       create: "Create"
       export: "Export"
       admin_users:
@@ -164,9 +174,10 @@ en:
         end: "End At"
         acitve: "Active?"
         action: "Action"
-
       discount:
         confirm: "Are you sure?"
+        active: "Yes"
+        inactive: "No"
       form:
         title: "Title"
         description: "Description"
@@ -177,7 +188,9 @@ en:
         create: "Create"
       new:
         new: "New Discount"
-
+      edit:
+        edit: "Edit"
+        export: "Export"
 
   controllers:
     admins:

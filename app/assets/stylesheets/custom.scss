@@ -7,6 +7,23 @@
 .clearfix {
  *zoom: 1;
 }
+td{
+  &.red{
+    color: #ff0000
+  }
+  &.green{
+    color: #07ef00
+  }
+}
+.yellow{
+  color: #f2ff00
+}
+
+.blue{
+  color: #0055ff
+}
+
+
 .clearfix:before, .clearfix:after {
   display: table;
   content: "";

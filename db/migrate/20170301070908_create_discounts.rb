@@ -6,7 +6,7 @@ class CreateDiscounts < ActiveRecord::Migration[5.0]
       t.float :dis_value
       t.date :date_start
       t.date :date_end
-      t.boolean :active
+      t.integer :status
 
       t.timestamps
     end
