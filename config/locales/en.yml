@@ -33,12 +33,10 @@ en:
   update: "Update"
   back: "Back"
   edit: "Edit"
-
   waiting: "Waiting"
   accepted: "Accepted"
   rejected: "Rejected"
   finished: "Finished"
-
   layouts:
     header:
       about_us: "About Us"
@@ -50,14 +48,6 @@ en:
       contact_us: "Contact Us"
       login: "Login"
       logout: "Logout"
-    footer:
-      general: "General terms and conditions"
-      operation: "Operation policy"
-      policy: "Policy on information confidentiality"
-      company_name: "Viet Nam Joint Venture Company Ltd."
-      company_address: "292 Ba Trieu st., Le Dai Hanh ward, Hai Ba Trung dist., Ha Noi"
-      company_phone: "Tel office: (08) 38489828 - Tax: 0100773885"
-      company_email: "Email: fastfood@gmail.com"
     banner:
       find_restaurant: "Find the nearest restaurant"
   users:
@@ -84,6 +74,9 @@ en:
       value: "Input value"
     helpers:
       base_title: "Fast food store"
+    users:
+      index: "Home"
+      details: "Product details"
     admins:
       form:
         shop_id: "Shop ID"
@@ -143,7 +136,6 @@ en:
       footer:
         copy_right: "2017 Website developed by"
         name_team: "RUBY TEAM"
-
   admin:
     orders:
       list_orders:
@@ -160,7 +152,6 @@ en:
         order_list: "Manage Order"
         order: "Unassigned Order"
         order_assign: "Assigned Order"
-
     discounts:
       index:
         show: "Discount"
@@ -191,7 +182,6 @@ en:
       edit:
         edit: "Edit"
         export: "Export"
-
   controllers:
     admins:
       product:

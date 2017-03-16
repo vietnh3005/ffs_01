@@ -1,34 +1,177 @@
-<footer id="footer">
-  <div id="bottom" class="footer-pc">
-    <div clas="clearfix"></div>
-    <div class="footer_top">
-      <%= image_tag "bottom_image" %>
-    </div>
-    <div clas="clear"></div>
-    <div class="footer_terms">
-      <div class="footer_terms_wrapper container">
-        <div class="terms_left">
-          <ul>
-            <li><%= link_to t(".general"), root_path %></li>
-            <li><%= link_to t(".operation"), root_path %></li>
-            <li>
-              <%= link_to t(".policy"), root_path %>
-            </li>
-            </ul>
-        </div>
-        <div class="terms_right">
-          <br>
-          <p class="company_name"><%= t ".company_name" %></p>
-          <p><%= t ".company_address" %></p>
-          <p><%= t ".company_phone" %></p>
-          <p><%= link_to t(".company_email"),"#" %></p>
-          <br>
+<div class="footer-top">
+  <div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="footer-item">
+          <div class="content-footer">
+            <h3></h3>
+            <div class="item-image1">
+              <%= link_to "#" do %>
+                <%= image_tag "DMCA.png" %>
+              <% end %>
+              <%= link_to "#" do %>
+                <%= image_tag "bct.png" %>
+              <% end %>
+            </div>
+            <div class="item-image2">
+              <%= link_to "#" do %>
+                <%= image_tag "1-(3).png" %>
+              <% end %>
+              <%= link_to "#" do %>
+                <%= image_tag "1-(1).png" %>
+              <% end %>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="fb_wrap">
-      <div class="container">
+      <div class="col-sm-4">
+        <div class="footer-item">
+          <div class="content-footer">
+            <h3></h3>
+            <div class="item-image3">
+              <%= link_to "#" do %>
+                <%= image_tag "logo_viettelpost.png" %>
+              <% end %>
+            </div>
+            <div class="item-image4">
+              <%= link_to "#" do %>
+                <%= image_tag "ZALORA Logo.png" %>
+              <% end %>
+              <%= link_to "#" do %>
+                <%= image_tag "vnpost.png" %>
+              <% end %>
+            </div>
+            <div class="item-image5">
+              <%= link_to "#" do %>
+                <%= image_tag "lazada.png" %>
+              <% end %>
+              <%= link_to "#" do %>
+                <%= image_tag "logo.png" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="footer-item">
+          <div class="content-footer">
+            <h3></h3>
+            <div class="item-image6">
+              <%= link_to "#" do %>
+                <%= image_tag "fb.png" %>
+              <% end %>
+              <%= link_to "#" do %>
+                <%= image_tag "Instagram_Logo-30.png" %>
+              <% end %>
+              <%= link_to "#" do %>
+                <%= image_tag "yt.png" %>
+              <% end %>
+              <%= link_to "#" do %>
+                <%= image_tag "gg.png" %>
+              <% end %>
+            </div>
+            <p><%= t "layouts.footer.call" %></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</footer>
+</div>
+<div class="foot-bottom">
+  <div class="item-footer">
+    <div class="row">
+      <div class="col-sm-2">
+        <p class="title-footer"><%= t "layouts.footer.product" %></p>
+        <ul>
+          <li>
+            <%= link_to products_path do %>
+              <%= t "layouts.footer.chicken" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to products_path do %>
+              <%= t "layouts.footer.rice" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to products_path do %>
+              <%= t "layouts.footer.food" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to products_path do %>
+              <%= t "layouts.footer.fruit" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to products_path do %>
+              <%= t "layouts.footer.humberger" %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <p class="title-footer"><%= t "layouts.footer.support" %></p>
+        <ul>
+          <li>
+            <%= link_to products_path do %>
+              <%= t "layouts.footer.support_1" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to products_path do %>
+              <%= t "layouts.footer.support_2" %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <p class="title-footer"><%= t "layouts.footer.about_us" %></p>
+          <ul>
+            <li>
+              <%= link_to products_path do %>
+                <%= t "layouts.footer.intro" %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to products_path do %>
+                <%= t "layouts.footer.map" %>
+              <% end %>
+            </li>
+          </ul>
+      </div>
+      <div class="col-sm-4">
+        <p class="title-footer"><%= t "layouts.footer.company" %></p>
+        <p class="title-footer1"><%= t "layouts.footer.company_name" %></p>
+        <p class="title-footer1"><%= t "layouts.footer.company_add" %></p>
+        <p class="title-footer1"><%= t "layouts.footer.company_tel" %></p>
+        <p class="title-footer1"><%= t "layouts.footer.company_email" %></p>
+        <p class="title-footer1"><%= t "layouts.footer.company_web" %></p>
+      </div>
+    </div>
+  </div>
+  <div class="menu-footer">
+    <ul>
+      <li>
+        <%= link_to "#" do %>
+          <%= t "home" %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "#" do %>
+          <%= t "layouts.footer.intro" %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "#" do %>
+          <%= t "layouts.footer.guide" %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "#" do %>
+          <%= t "layouts.footer.contact" %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>
