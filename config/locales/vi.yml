@@ -1,0 +1,232 @@
+vi:
+  please: "Làm ơn đăng nhập!"
+  hello: "Chào thế giới"
+  welcome: "Chào mừng đến với"
+  login: "Đăng nhập"
+  time:
+    formats:
+      date: "%d-%m-%y"
+  home: "Trang chủ"
+  framgia: "Framgia"
+  signup: "Đăng ký"
+  update: "Cập nhật"
+  back: "Quay lại"
+  edit: "Sửa"
+  layouts:
+    header:
+      store: "Chuỗi nhà hàng"
+      ship: "Ship toàn quốc"
+      ship_text: "Fastfood Store giao hàng tận nơi trên toàn quốc"
+      check: "Kiểm tra tại nhà"
+      check_text: "Khi nhận hàng quý khách có thể mở ra kiểm tra, nếu hàng không như order bạn có thể từ chối nhận hàng, hoàn toàn miễn phí và áp dụng trên toàn quốc"
+      money: "Thu tiện tận nhà"
+      money_text: "Khách hàng nhận hàng mới trả tiền tại nhà, phí sẽ được tính trên đơn hàng"
+      cart: "Giỏ hàng"
+      cart_text: "Đây là giỏ hàng của bạn, click vào đây để xem những sản phẩm trong giỏ hàng"
+      hotline: "HOT LINE"
+      phone: "01659882381"
+      about_us: "Giới thiệu về chùng tôi"
+      menu: "Thực đơn"
+      membership: "Thành viên"
+      promotions: "Khuyến mãi"
+      career: "Nghề nghiệp"
+      new: "Mới"
+      contact_us: "Liên hệ với chúng tôi"
+      login: "Đăng nhập"
+      logout: "Thoát"
+    footer:
+      call: "Call me: 01659 882 381"
+      product: "Sản phẩm"
+      chicken: "Gà rán"
+      rice: "Cơm"
+      food: "Thức ăn nhẹ"
+      fruit: "Đồ tráng miệng"
+      humberger: "Humburger"
+      support: "HỖ TRỢ KHÁCH HÀNG"
+      support_1: "Hướng dẫn mua hàng"
+      support_2: "Thanh toán và giao nhận"
+      about_us: "Thông tin về cửa hàng chúng tôi"
+      intro: "Giới thiệu"
+      map: "Bản đồ"
+      company: "ĐƠN VỊ"
+      company_name: "Công ty TNHH Framgia"
+      company_add: "Phạm hùng, Từ liêm, Hà Nội"
+      company_tel: "Tel: 01659 882 381"
+      company_email: "Email: dungvuit@gmail.com"
+      company_web: "Website: www.fastfood.vn"
+      intro: "Giới thiệu"
+      guide: "Hướng dẫn"
+      contact: "Liên hệ"
+    banner:
+      find_restaurant: "Tìm nhà hàng gần nhất"
+  users:
+    registrations:
+      edit:
+        blank: "(Để trống nếu bạn không muốn thay đổi nó)"
+        minimum: "Ký tự tối thiểu"
+        current: "(Chúng tôi cần mật khẩu hiện tại của bạn để xác nhận thay đổi của bạn)"
+      new:
+        minimum_length: "Ký tự tối thiểu"
+    shared:
+      links:
+        forgot: "Quên mật khẩu?"
+  staffs:
+    pages:
+      home:
+        staff_home: "Nhân viên Trung ương"
+        staff_des: "Trang chủ của nhân viên"
+  views:
+    errors_contain: "Biểu mẫu có chứa"
+    error: "lỗi"
+    search: "Tìm kiếm"
+    input:
+      value: "Nhập giá trị"
+    helpers:
+      base_title: "Cửa hàng thức ăn nhanh"
+    users:
+      index: "Trang chủ"
+      details: "Chi tiết sản phẩm"
+    admins:
+      form:
+        shop_id: "Shop ID"
+        product:
+          name: "Tên sản phẩm"
+        category:
+          name: "Tên chuyên mục"
+        confirm: "Bạn có chắc không?"
+        name: "Tên"
+        email: "Email"
+        address: "Địa chỉ"
+        phone: "Số điện thoại"
+        point: "Điểm"
+        membership: "Thành viên"
+        role: "Vài trò"
+        action: "Hành động"
+        position: "Chức vụ"
+        image: "Hình ảnh"
+        price: "Giá"
+        status: "Trạng thái"
+        description: "Mô tả"
+      create: "Tạo mới"
+      export: "Xuất file excel"
+      admin_users:
+        show: "Danh sách người dùng"
+      admin_shopowners:
+        show: "Danh sách chủ cửa hàng"
+      admin_staffs:
+        edit: "Sửa nhân viên"
+        new: "Thêm mới nhân viên"
+        show: "Danh sách nhân viên"
+      admin_products:
+        edit: "Sửa sản phẩm"
+        new: "Thêm mới sản phẩm"
+        show: "Danh sách sản phẩm"
+      admin_categories:
+        edit: "Sửa chuyên mục"
+        new: "Thêm mới chuyên mục"
+        show: "Danh sách chuyên mục"
+      header:
+        logout: "Thoát"
+        menu:
+          home: "Trang chủ"
+          staff: "Nhân viên"
+          shop_owners: "Chủ cửa hàng"
+          user: "Người dùng"
+          product: "Sản phẩm"
+          category: "Chuyên mục"
+          order: "Đơn hàng"
+          unassign: "Chưa chuyển giao"
+          assign: "Đã chuyển giao"
+      body:
+      footer:
+        copy_right: "2017 Trang web được phát triển bởi"
+        name_team: "RUBY TEAM"
+  admin:
+    orders:
+      list_orders:
+        id: "Đơn hàng ID"
+        rec_name: "Tên người nhận"
+        rec_addr: "Địa chỉ người nhận"
+        rec_phone : "Số điện thoại người nhận"
+        status: "Trạng thái đơn hàng"
+        total: "Toàn bộ"
+        at: "Tạo ra"
+        assign : "Chuyển giao"
+        take : "Lấy"
+      index:
+        order_list: "Quản lý đơn hàng"
+        order: "Chưa chuyển giao đơn hàng"
+        order_assign: "Đã chuyển giao đơn hàng"
+    discounts:
+      index:
+        show: "Giảm giá"
+        create: "Khởi tạo"
+        export: "Xuất file excel"
+      list_discount:
+        title: "Tên"
+        description: "Mô tả"
+        value: "Tỉ lệ"
+        start: "Ngày bắt đầu"
+        end: "Ngày kết thúc"
+        acitve: "Khả dụng"
+        action: "Hoạt động"
+      discount:
+        confirm: "Bạn có chắc không"
+      form:
+        title: "Tên"
+        description: "Mô tả"
+        value: "Tỉ lệ"
+        start: "Ngày bắt đầu"
+        end: "Ngày kết thúc"
+        acitve: "Khả dụng"
+        action: "Hoạt động"
+      new:
+        new: "Thêm mới"
+  controllers:
+    admins:
+      product:
+        create_product: "Thêm mới sản phẩm thành công"
+        update_product: "Sản phẩm đã cập nhật"
+        delete_product: "Sản phẩm đã xóa"
+      user:
+        create_user: "Người dùng được khởi tạo thành công"
+        update_user: "Người dùng đã cập nhật"
+        delete_user: "Người dùng đã xóa"
+        user_not_exist: "Người dùng không tồn tại"
+      staff:
+        create_staff: "Nhân viên được khởi tạo thành công"
+        update_staff: "Nhân viên đã cập nhật"
+        delete_staff: "Nhân viên đã xóa"
+        staff_not_exist: "Nhân viên không tồn tại"
+        wrong_staff: "Không thể xóa nhân viên"
+      product:
+        create_product: "Sản phẩm được khởi tạo thành công"
+        update_product: "Sản phẩm đã cập nhật"
+        delete_product: "Sản phẩm đã xóa"
+      discount:
+        update_success: "Cập nhật thành công"
+        update_fail: "Cập nhật thất bại"
+        delete_discount: "Đã xóa!"
+        create_discount: "Đã khởi tạo!"
+  products:
+    show:
+      available: "Có sẵn"
+      not_availabel: "Không Có sẵn"
+      add_cart: "Thêm vào giỏ hàng"
+      not_exist: "Không có sản phẩm"
+  number:
+    format:
+      separator: "."
+      delimiter: ","
+      precision: 2
+      significant: false
+      strip_insignificant_zeros: false
+    currency:
+      format:
+        format: "%u%n"
+        unit: "$"
+        separator: "."
+        delimiter: ","
+        precision: 2
+        significant: false
+        strip_insignificant_zeros: false
