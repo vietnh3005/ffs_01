@@ -1,33 +1,137 @@
-<header class="navbar navbar-inverse navbar-fixed-top wet-asphalt">
-  <div class="top-bar clearfix">
-   <div class="line clearfix"></div>
-      <div class="container">
+<div class="desktop-header">
+  <div class="header">
+    <div class="container">
+      <div class="row">
+        <div class="menu-top">
+          <div class="col-sm-4">
+            <ul class="nav">
+              <li>
+                <%= link_to "#" do %>
+                  <%= t "login" %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to "#" do %>
+                  <%= t "signup" %>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="menu-top-1">
+          <div class="col-sm-8">
+            <ul class="nav">
+              <li class="menu-top1-19">
+                <%= link_to "#" do %>
+                  <%= t "layouts.header.ship" %>
+                <% end %>
+                <div class="sub-content" id="sub-content-19">
+                  <%= t "layouts.header.ship_text" %>          
+                </div>
+              </li>
+              <li>
+                <%= link_to "#" do %>
+                  <%= t "layouts.header.check" %>
+                <% end %>
+                <div class="sub-content" id="sub-content-17">
+                  <%= t "layouts.header.check_text" %>        
+                </div>
+              </li>
+              <li class="menu-top1-20">
+                <%= link_to "#" do %>
+                  <%= t "layouts.header.money" %>
+                <% end %>
+                <div class="sub-content" id="sub-content-20">
+                  <%= t "layouts.header.money_text" %>
+                </div>
+              </li>
+              <li class="menu-top1-20">
+                <%= link_to "#", class: "fa fa-cart-plus" do %>
+                  <%= t "layouts.header.cart" %>
+                <% end %>
+                <div class="sub-content" id="sub-content-20">
+                  <%= t "layouts.header.cart_text" %>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-  </div>
-  <div class="container mainheader ">
-    <div class="navbar-header">
-      <span class="navbar-brand">
-        <%= link_to root_path do %>
-          <%= image_tag "logo", class: "logo-com" %>
-        <% end %>
-      </span>
     </div>
-    <div class="collapse navbar-collapse">
-      <ul id="main-menu" class="nav navbar-nav navbar-right">
-        <li><%= link_to t(".about_us"),products_path %></li>
-        <li class="divider"></li>
-        <li><%= link_to t(".menu"),root_path %></li>
-        <li class="divider"></li>
-        <li><%= link_to t(".membership"),root_path %></li>
-        <li class="divider"></li>
-        <li><%= link_to t(".promotions"),root_path %></li>
-        <li class="divider"></li>
-        <li><%= link_to t(".carrer"),root_path %></li>
-        <li class="divider"></li>
-        <li><%= link_to t(".new"),root_path %></li>
-        <li class="divider"></li>
-        <li ><%= link_to t(".contact_us"),root_path %></li>
+  </div>
+  <div class="container">
+    <div class="header-bottom">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="logo">
+            <%= link_to "#" do %>
+              <%= image_tag "logo1.png" %>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="top-search">
+            <%= form_tag "#", method: :get, id: "form-search", remote: true do %>
+              <%= text_field_tag :search, params[:search],
+                placeholder: t("views.input.value") %>
+              <%= button_tag do %>
+                <span class="glyphicon glyphicon-search"</span>
+              <% end %>
+              <div class="clearfix"></div>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="hotline">
+            <div>
+              <i class="fa fa-phone"></i>
+              <%= t "layouts.header.hotline" %>
+            </div>
+            <span><%= t "layouts.header.phone" %></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="menu-nav">
+      <ul class="nav">
+        <li>
+          <%= link_to products_path do %>
+            <%= t "home" %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <%= t "layouts.header.store" %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <%= t "layouts.header.combo" %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <%= t "layouts.footer.rice" %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <%= t "layouts.footer.food" %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <%= t "layouts.footer.fruit" %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <%= t "layouts.footer.humberger" %>
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>
-</header>
+</div>

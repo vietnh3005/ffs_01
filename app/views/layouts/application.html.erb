@@ -2,23 +2,20 @@
 <html>
   <head>
     <title><%= full_title yield :title %></title>
-    <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag "application", media: "all",
-      "data-turbolinks-track": true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track": true %>
+    <%= render "layouts/rails_default" %>
     <%= render "layouts/shim" %>
   </head>
-  <body>
-    <div>
+  <body id="users">
+    <div class="user">
       <%= render "layouts/header" %>
-      <%= render "layouts/banner" %>
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
       <div class="container">
-        <% flash.each do |message_type, message| %>
-          <div class="alert alert-<%= message_type %>"><%= message %></div>
-        <% end %>
+        <%= render "/layouts/slide" %>
         <%= yield %>
+        <%= render "/layouts/footer" %>
       </div>
-      <%= render "layouts/footer" %>
     </div>
   </body>
 </html>
