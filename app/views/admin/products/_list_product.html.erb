@@ -11,10 +11,16 @@
 <tbody>
   <% @products.each do |product| %>
     <tr class="background-tr">
-      <td><%= image_tag product.image, class: "size-img-thumbnail" %></td>
+      <td>
+        <%= link_to "#", "data-toggle": "modal", "data-target": "#product_modal_#{product.id}" do %>
+          <%= image_tag product.image, class: "size-img-thumbnail" %>
+        <% end %>
+      </td>
       <td><%= product.name %></td>
       <td><%= product.price %></td>
-      <td><%= product.status ? t(".available") : t("not_avilable") %></td>
+      <td>
+        <%= t "admin.products.list_product.#{Settings.product.status.send(product.status)}" %>
+      </td>
       <td>
         <ul class="text-center">
           <% product.categories.each do |category| %>
@@ -34,5 +40,6 @@
         <% end %>
       </td>
     </tr>
+  <%= render "layouts/modal", product: product %>
   <% end %>
 </tbody>

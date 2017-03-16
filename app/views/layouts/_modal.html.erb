@@ -1,0 +1,44 @@
+<div class="modal fade" id="product_modal_<%= product.id %>" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <%= link_to "#", class: "close", "data-dismiss": "modal" do %>
+          &times;
+        <% end %>
+        <h4 class="modal-title"><%= t "views.layout.modal.title_details" %></h4>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <%= image_tag product.image, class: "size-img-modal" %>
+        </div>
+        <div class="col-md-7">
+          <div class="info-product">
+            <p><%= t "views.layout.modal.name" %>:&nbsp;
+              <%= product.name %>
+            </p>
+            <p><%= t "views.layout.modal.status" %>:&nbsp;
+              <%= t "views.layout.modal.#{Settings.product.status.send(product.status)}" %>
+            </p>
+            <p><%= t "views.layout.modal.description" %>:&nbsp;
+              <%= product.description %></p>
+            <p><%= t "views.admins.form.price" %>:&nbsp;
+              <%= number_to_currency product.price %></p>
+            <p><%= t "views.layout.modal.name_cat" %>:&nbsp;
+              <%= link_to "#" do %>
+                <% product.categories.each do |category| %>
+                  <%= category.name  %>
+                <% end %>
+              <% end %>
+            </p>
+
+         </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <%= link_to "#", class: "btn btn-default", "data-dismiss": "modal" do %>
+          <%= t "modal.close" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

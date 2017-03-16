@@ -1,6 +1,10 @@
+@import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
 
+.modal-title {
+  text-align: center;
+}
 #users {
   background: url(/assets/body-bg7.png);
   .user {

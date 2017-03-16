@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
   scope :sort_by_create_at, -> {order created_at: :desc}
+  enum status: [:avalable, :unavalable]
 
   has_many :categories, through: :category_products
   has_many :category_products, dependent: :destroy
