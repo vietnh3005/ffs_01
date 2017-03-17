@@ -4,6 +4,7 @@ class Admin::ProductsController < ApplicationController
   
   before_action :authenticate_staff!
   before_action :load_data, only: [:index, :new, :edit]
+  before_action :load_status_product, only: [:new, :edit]
 
   def index
     @products = Product.sort_by_create_at.paginate page: params[:page]
@@ -47,6 +48,10 @@ class Admin::ProductsController < ApplicationController
   end
 
   private
+  def load_status_product
+    @status = Product.statuses.keys
+  end
+
   def product_params
     params.require(:product).permit :name, :description, :price, :status, :image,
       :category_ids

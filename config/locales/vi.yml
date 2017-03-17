@@ -60,6 +60,7 @@ vi:
     banner:
       find_restaurant: "Tìm nhà hàng gần nhất"
   users:
+    button_view: "Xem"
     registrations:
       edit:
         blank: "(Để trống nếu bạn không muốn thay đổi nó)"
@@ -76,6 +77,17 @@ vi:
         staff_home: "Nhân viên Trung ương"
         staff_des: "Trang chủ của nhân viên"
   views:
+    layout:
+      modal:
+        name: "Tên"
+        status: "Trạng thái"
+        description: "Mô tả"
+        price: "Giá"
+        name_cat: "Tên chuyên mục"
+        Available: "Có sẵn"
+        Unavailable: "Không Có sẵn"
+        close: "Đóng"
+        title_details: "Chi tiết sản phẩm"
     errors_contain: "Biểu mẫu có chứa"
     error: "lỗi"
     search: "Tìm kiếm"
@@ -157,6 +169,10 @@ vi:
         order_list: "Quản lý đơn hàng"
         order: "Chưa chuyển giao đơn hàng"
         order_assign: "Đã chuyển giao đơn hàng"
+    products:
+      list_product:
+        Available: "Có sẵn"
+        Unavailable: "Không Có sẵn"
     discounts:
       index:
         show: "Giảm giá"

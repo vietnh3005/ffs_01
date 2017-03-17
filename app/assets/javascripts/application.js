@@ -12,17 +12,21 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bxslider
-//= require bootstrap
 //= require turbolinks
-//= require bootstrap-datepicker
 //= require_tree .
+//= require bootstrap-sprockets
+//= require bxslider
+//= require bootstrap-datepicker
 
 jQuery(document).ready(function($){
 
-  $('.bxslider').bxSlider({
-    auto: true,
-  });
+  document.addEventListener("turbolinks:load", function() {
+    if($('.bxslider').length > 0){
+      $('.bxslider').bxSlider({
+        auto: true,
+      });
+    }
+  })
 
   var top = jQuery('.menu-nav').offset().top - parseFloat(jQuery('.menu-nav').css('margin-top').replace(/auto/, 0));
   jQuery(window).scroll(function (event) {

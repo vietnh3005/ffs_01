@@ -7,3 +7,7 @@ discount:
   status:
     active: "green"
     inactive: "red"
+product:
+  status:
+    avalable: "Available"
+    unavalable: "Unavailable"
