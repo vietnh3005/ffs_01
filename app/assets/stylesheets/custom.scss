@@ -53,12 +53,12 @@
       }
     }
   }
-    .menu-top-1 ul li #sub-content-19.sub-content, 
+    .menu-top-1 ul li #sub-content-19.sub-content,
     .menu-top-1 ul li #sub-content-20.sub-content{
       left: auto;
       right: 0;
     }
-    .menu-top-1 ul li #sub-content-19.sub-content::before, 
+    .menu-top-1 ul li #sub-content-19.sub-content::before,
     .menu-top-1 ul li #sub-content-20.sub-content::before{
       left: auto;
       right: 30px;
@@ -271,7 +271,7 @@
       text-transform: uppercase;
     }
     .menu-nav > .nav > li.current-menu-item > a,
-    .menu-nav ul li a:focus, 
+    .menu-nav ul li a:focus,
     .menu-nav ul li a:hover{
       background: none;
       color: #ff4d4d;
@@ -380,7 +380,7 @@
     .footer-top .footer-item .content-footer .item-image1{
       padding: 30px 0 10px;
     }
-    .footer-top .footer-item .content-footer .item-image1 a, 
+    .footer-top .footer-item .content-footer .item-image1 a,
     .footer-top .footer-item .content-footer .item-image2 a{
       padding: 0 5px;
     }
@@ -662,13 +662,13 @@
       padding: 10px;
     }
     .detail .bx-wrapper .bx-controls-direction .bx-prev{
-      position: absolute; 
-      top: 50%; 
+      position: absolute;
+      top: 50%;
       left: 0;
     }
     .detail .bx-wrapper .bx-controls-direction .bx-next{
-      position: absolute; 
-      top: 50%; 
+      position: absolute;
+      top: 50%;
       right: 0;
     }
     .detail .bx-wrapper .bx-controls-direction a{
@@ -709,11 +709,11 @@
     .option-rating input{
       display: none;
     }
-    button, input[type="button"], 
-    input[type="checkbox"], 
-    input[type="radio"], 
-    input[type="reset"], 
-    input[type="submit"], 
+    button, input[type="button"],
+    input[type="checkbox"],
+    input[type="radio"],
+    input[type="reset"],
+    input[type="submit"],
     label, select{
       cursor: pointer;
     }
@@ -731,7 +731,7 @@
       text-align: center;
       width: 30px;
     }
-    .actived.option-rating label, 
+    .actived.option-rating label,
     .selected.option-rating label{
       background-position: 0 0;
     }
@@ -831,15 +831,15 @@
       width: 100%;
     }
 
-    .ui-tabs-vertical .ui-tabs-nav li { 
-      clear: left; width: 100%; 
-      border-bottom-width: 1px !important; 
-      border-right-width: 0 !important; 
-      margin: 0 -1px .2em 0; 
+    .ui-tabs-vertical .ui-tabs-nav li {
+      clear: left; width: 100%;
+      border-bottom-width: 1px !important;
+      border-right-width: 0 !important;
+      margin: 0 -1px .2em 0;
     }
-    .ui-tabs-vertical .ui-tabs-nav li a { 
-      display: block; 
-      text-decoration: none; 
+    .ui-tabs-vertical .ui-tabs-nav li a {
+      display: block;
+      text-decoration: none;
       color: #000;
     }
     .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active a,
@@ -847,11 +847,58 @@
     .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active a:hover { background: #F1F2F2;}
     .ui-tabs-vertical .ui-tabs-nav li { list-style: none; }
     .ui-tabs-vertical .ui-tabs-nav { padding: 0; }
-    .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active  { 
-      padding-bottom: 0; 
-      padding-right: .1em; 
-      border-right-width: 1px; 
+    .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active  {
+      padding-bottom: 0;
+      padding-right: .1em;
+      border-right-width: 1px;
     }
     .ui-tabs-vertical .ui-tabs-panel iframe{ width: 100%;}
   }
+}
+
+#stock_available{
+  color: red;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none !important;
+  padding: 40%;
+}
+
+.pro_price{
+  float: left;
+  width: 100%;
+  margin: 15px 0;
+  padding-left: 10%;
+  font-size: 25px;
+  font-style: italic;
+}
+
+.add_quantity_cart{
+  width: 80%;
+  float: left;
+  margin-left: 10%;
+  border-top: 1px
+  solid #aaa;
+  border-bottom: 1px solid #aaa;
+  height: 70px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.quantity{
+  float: left;
+  width: 45%;
+}
+
+.order_image img{
+  max-width: 117px;
+  max-height: 116px;
+}
+
+.h2 .media-heading{
+}
+
+#order_detail_quantity,#order_detail_price,#order_detail_total{
+  text-align: center;
 }

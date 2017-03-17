@@ -11,7 +11,8 @@
             <% end %>
           </div>
           <div class="tittle-product">
-            <%= link_to "#" do %>
+            <%= link_to "#","data-toggle": "modal",
+              "data-target": "#product_modal_#{product.id}" do %>
               <%= product.name %>
             <% end %>
           </div>

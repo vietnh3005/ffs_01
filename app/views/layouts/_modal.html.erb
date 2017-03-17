@@ -7,38 +7,43 @@
         <% end %>
         <h4 class="modal-title"><%= t "views.layout.modal.title_details" %></h4>
       </div>
-      <div class="row">
-        <div class="col-md-5">
-          <%= image_tag product.image, class: "size-img-modal" %>
-        </div>
-        <div class="col-md-7">
-          <div class="info-product">
-            <p><%= t "views.layout.modal.name" %>:&nbsp;
-              <%= product.name %>
-            </p>
-            <p><%= t "views.layout.modal.status" %>:&nbsp;
-              <%= t "views.layout.modal.#{Settings.product.status.send(product.status)}" %>
-            </p>
-            <p><%= t "views.layout.modal.description" %>:&nbsp;
-              <%= product.description %></p>
-            <p><%= t "views.admins.form.price" %>:&nbsp;
-              <%= number_to_currency product.price %></p>
-            <p><%= t "views.layout.modal.name_cat" %>:&nbsp;
-              <%= link_to "#" do %>
-                <% product.categories.each do |category| %>
-                  <%= category.name  %>
+      <%= form_for @order_detail do |f| %>
+        <div class="row">
+          <div class="col-md-5">
+            <%= image_tag product.image, class: "size-img-modal" %>
+          </div>
+          <div class="col-md-7">
+            <div class="info-product">
+              <p><%= t "views.layout.modal.name" %>:&nbsp;
+                <%= product.name %>
+              </p>
+              <p><%= t "views.layout.modal.status" %>:&nbsp;
+                <%= t "views.layout.modal.#{Settings.product.status.send(product.status)}" %>
+              </p>
+              <p><%= t "views.layout.modal.description" %>:&nbsp;
+                <%= product.description %></p>
+              <p><%= t "views.admins.form.price" %>:&nbsp;
+                <%= number_to_currency product.price %></p>
+              <p><%= t "views.layout.modal.name_cat" %>:&nbsp;
+                <%= link_to "#" do %>
+                  <% product.categories.each do |category| %>
+                    <%= category.name  %>
+                  <% end %>
                 <% end %>
-              <% end %>
-            </p>
-
-         </div>
+              </p>
+              <p><%= t"views.layout.modal.quantity" %> <%= f.number_field :unit_quantity, value: Settings.one,
+                 min: Settings.one %></p>
+              <%= f.hidden_field :product_id, value: product.id %>
+           </div>
+          </div>
         </div>
-      </div>
-      <div class="modal-footer">
-        <%= link_to "#", class: "btn btn-default", "data-dismiss": "modal" do %>
-          <%= t "modal.close" %>
-        <% end %>
-      </div>
+        <div class="modal-footer">
+          <%= f.submit t("products.show.add_cart"), class: "btn btn-danger" %>
+          <%= link_to "#", class: "btn btn-default", "data-dismiss": "modal" do %>
+            <%= t "modal.close" %>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

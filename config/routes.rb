@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   end
 
   resources :products, only: [:show, :index]
+  resources :order_details, except: [:show]
+  resources :orders
 end

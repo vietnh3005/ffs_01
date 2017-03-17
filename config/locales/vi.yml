@@ -12,6 +12,10 @@ vi:
   update: "Cập nhật"
   back: "Quay lại"
   edit: "Sửa"
+  flash:
+    danger:
+      staff: "Nhân viên không được phép đặt hàng"
+      order_total: "Giá trị đơn hàng không được bằng không"
   layouts:
     header:
       store: "Chuỗi nhà hàng"
@@ -60,7 +64,7 @@ vi:
     banner:
       find_restaurant: "Tìm nhà hàng gần nhất"
   users:
-    button_view: "Xem"
+    button_view: "Thêm"
     registrations:
       edit:
         blank: "(Để trống nếu bạn không muốn thay đổi nó)"
@@ -76,6 +80,15 @@ vi:
       home:
         staff_home: "Nhân viên Trung ương"
         staff_des: "Trang chủ của nhân viên"
+  orders:
+    show:
+      cart: "Giỏ hàng"
+      total_pay: "Tổng cộng"
+      price: "Giá một đơn vị"
+      product: "Sản phẩm"
+      total: "Giá"
+      continue: "Mua tiếp"
+      checkout: "Thanh toán"
   views:
     layout:
       modal:
@@ -83,11 +96,12 @@ vi:
         status: "Trạng thái"
         description: "Mô tả"
         price: "Giá"
-        name_cat: "Tên chuyên mục"
+        name_cat: "Danh mục"
         Available: "Có sẵn"
         Unavailable: "Không Có sẵn"
         close: "Đóng"
         title_details: "Chi tiết sản phẩm"
+        quantity: "Chọn số lượng: "
     errors_contain: "Biểu mẫu có chứa"
     error: "lỗi"
     search: "Tìm kiếm"
@@ -98,6 +112,17 @@ vi:
     users:
       index: "Trang chủ"
       details: "Chi tiết sản phẩm"
+    products:
+      index:
+        add: "Thêm"
+      show:
+        add_cart: "Thêm vào giỏ hàng"
+        products: "Sản phẩm"
+
+    order_details:
+      order_detail:
+        confir_delete: "Xác nhận xóa"
+
     admins:
       form:
         shop_id: "Shop ID"

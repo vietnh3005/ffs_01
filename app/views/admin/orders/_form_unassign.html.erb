@@ -20,7 +20,7 @@
       <td><%= order.rec_name %></td>
       <td><%= order.rec_addr %></td>
       <td><%= order.rec_phone %></td>
-      <td><%= order.status %></td>
+      <td><%= t ".#{order.status}" %></td>
       <td><%= number_to_currency order.total %></td>
       <td><%= order.created_at.strftime(t "time.formats.date") %></td>
       <% if current_staff.admin? %>
