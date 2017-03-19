@@ -14,5 +14,6 @@
  *= require_self
  *= require bxslider
  *= require font-awesome
+ *= require toastr
  *= require bootstrap-datepicker
  */
