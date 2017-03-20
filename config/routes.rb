@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :categories, except: [:show]
     resources :discounts
     get "chefs/*page", to: "chefs#index", page: "index", as: "chef_order"
+    get "shippers/*page", to: "shippers#index", page: "index", as: "shipper_order"
   end
 
   resources :products, only: [:show, :index]
