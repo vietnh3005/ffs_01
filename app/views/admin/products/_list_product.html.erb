@@ -11,10 +11,8 @@
 <tbody>
   <% @products.each do |product| %>
     <tr class="background-tr">
-      <td>
-        <%= link_to "#", "data-toggle": "modal", "data-target": "#product_modal_#{product.id}" do %>
-          <%= image_tag product.image, class: "size-img-thumbnail" %>
-        <% end %>
+      <td class="img-product">
+        <%= default_image product %>
       </td>
       <td><%= product.name %></td>
       <td><%= product.price %></td>
@@ -40,6 +38,5 @@
         <% end %>
       </td>
     </tr>
-  <%= render "layouts/modal", product: product %>
   <% end %>
 </tbody>

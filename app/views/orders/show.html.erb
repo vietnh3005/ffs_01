@@ -31,12 +31,14 @@
               <%= link_to t("orders.show.continue"), products_path ,
                 class: "btn btn-default"%>
             </td>
-            <td>
-              <%= form_for @order do |f| %>
-                <%= f.submit t(".checkout"), class: "btn btn-danger" %>
-                <%= f.hidden_field :status, value: "waiting" %>
-              <% end %>
-            </td>
+            <% unless @order.subtotal == Settings.zero %>
+              <td>
+                <%= link_to t(".checkout"), "#", class: "btn btn-danger",
+                  data: {toggle: "modal", target: "#order_modal_#{@order.id}"},
+                  remote: true %>
+                <%= render "checkout_modal", order: @order %>
+              </td>
+            <% end %>
           </tr>
         </tbody>
       </table>
