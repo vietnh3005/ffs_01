@@ -11,6 +11,12 @@ class Order < ApplicationRecord
   scope :assign, -> {where.not shop_id: nil}
   scope :sort_by_create_at, -> {order created_at: :desc}
 
+  scope :shop_order, lambda { |staff|
+    where("shop_id = ?", staff.shop_id)
+  }
+
+  scope :waiting_order, -> {where status: :waiting}
+
   before_create :init_order
   before_save :update_subtotal
 

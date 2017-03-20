@@ -29,10 +29,12 @@ Staff.create! name: "Vier",
   email: "vier@gmail.com",
   password: "111111",
   password_confirmation: "111111",
-  position: "chef"
+  position: "chef",
+  shop_id: "1"
 
 Staff.create! name: "Funf",
   email: "funf@gmail.com",
   password: "111111",
   password_confirmation: "111111",
-  position: "shipper"
+  position: "shipper",
+  shop_id: "1"

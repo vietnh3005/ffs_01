@@ -8,6 +8,9 @@ class Ability
       elsif staff.owner?
         can :read, Staff
         can :manage, Order
+      elsif staff.chef?
+        can :manage, Order
+        can :read, Product
       else
         cannot :access, :all
       end
