@@ -1,0 +1,30 @@
+<div class="row">
+  <% @products.each do |product| %>
+    <div class="col-sm-3 col-xs-6">
+      <div class="item">
+        <div class="img-product">
+          <%= link_to "#", "data-toggle": "modal",
+            "data-target": "#product_modal_#{product.id}" do %>
+            <%= image_tag product.image, class: "size-img-thumbnail" %>
+          <% end %>
+        </div>
+        <div class="tittle-product">
+          <%= link_to "#" do %>
+            <%= product.name %>
+          <% end %>
+        </div>
+        <div class="price-product pull-left" style="color: red; font-size: 20px;">
+          <%= number_to_currency product.price %>
+        </div>
+        <div class="view-product pull-right">
+          <%= link_to "#", "data-toggle": "modal",
+            "data-target": "#product_modal_#{product.id}", class: "btn-view" do %>
+            <%= t "users.button_view" %>
+          <% end %>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <%= render "layouts/modal", product: product %>
+  <% end %>
+</div>

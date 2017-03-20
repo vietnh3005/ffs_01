@@ -15,7 +15,7 @@
         <%= default_image product %>
       </td>
       <td><%= product.name %></td>
-      <td><%= product.price %></td>
+      <td><%= number_to_currency product.price %></td>
       <td>
         <%= t "admin.products.list_product.#{Settings.product.status.send(product.status)}" %>
       </td>

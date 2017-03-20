@@ -9,5 +9,5 @@ discount:
     inactive: "red"
 product:
   status:
-    avalable: "Available"
-    unavalable: "Unavailable"
+    available: "available"
+    unavailable: "unavailable"
