@@ -1,0 +1,40 @@
+<% if staff_signed_in? %>
+  <div class="header">
+    <div class="container">
+      <div class="logo pull-left">
+      </div>
+        <div class="account pull-right">
+          <div class="username">
+            <%= link_to "#" do %>
+              <span>
+                <%= current_staff.name %>
+                <i class="fa fa-caret-down"></i>
+              </span>
+            <% end %>
+          </div>
+          <ul>
+            <li>
+              <%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="fa fa-sign-out"></i>
+                <%= t "views.admins.header.logout" %>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+  <div class="menu-header">
+    <div class="container">
+      <ul>
+         <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-money"></i>
+              <%= t "views.admins.header.menu.order" %>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+<% end %>

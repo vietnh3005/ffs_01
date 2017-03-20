@@ -5,7 +5,8 @@ vi:
   login: "Đăng nhập"
   time:
     formats:
-      date: "%d-%m-%y"
+      date: "%d-%m-%Y"
+      default: "%d-%m-%Y"
   home: "Trang chủ"
   framgia: "Framgia"
   signup: "Đăng ký"
@@ -81,6 +82,10 @@ vi:
       home:
         staff_home: "Nhân viên Trung ương"
         staff_des: "Trang chủ của nhân viên"
+    sessions:
+      new:
+        email: "Email"
+        password: "Password"
   orders:
     show:
       cart: "Giỏ hàng"
@@ -186,6 +191,20 @@ vi:
         copy_right: "2017 Trang web được phát triển bởi"
         name_team: "RUBY TEAM"
   admin:
+    chefs:
+      index:
+        chef_manage: "Danh sách đơn hàng"
+        order_list: "Danh sách"
+      list_orders:
+        rec_name: "Tên khách hàng"
+        order_details: "Chi tiết đơn hàng"
+        created_at: "Ngày tạo"
+        status: "Trạng thái"
+        accept: "Sẵn sàng"
+        reject: "Hủy bỏ"
+        accepted: "Sẵng sàng"
+        rejected: "Hủy"
+        waiting: "Đang chờ"
     orders:
       list_orders:
         id: "Đơn hàng ID"

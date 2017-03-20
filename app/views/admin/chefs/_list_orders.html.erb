@@ -1,0 +1,34 @@
+<thead>
+  <tr>
+    <th><%= t ".rec_name" %></th>
+    <th><%= t ".order_details"%></th>
+    <th><%= t ".created_at" %></th>
+    <th><%= t ".status" %></th>
+    <th></th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+  <% @orders.each do |order| %>
+    <tr class="background-tr">
+      <td><%= order.rec_name %></td>
+      <td><%= render order.order_details %></td>
+      <td><%= l order.created_at %></td>
+      <th><%= t ".#{order.status}" %></th>
+      <td>
+        <%= form_for [:admin, order] do |f| %>
+          <%= f.hidden_field :shop_id, value: current_staff.shop_id %>
+          <%= f.hidden_field :status, value: "rejected" %>
+          <%= f.submit t(".reject"), class: "btn btn-danger" %>
+        <% end %>
+      </td>
+      <td>
+        <%= form_for [:admin, order] do |f| %>
+          <%= f.hidden_field :shop_id, value: current_staff.shop_id %>
+          <%= f.hidden_field :status, value: "accepted" %>
+          <%= f.submit t(".accept"), class: "btn btn-success" %>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</tbody>
