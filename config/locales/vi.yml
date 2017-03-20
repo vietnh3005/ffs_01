@@ -63,6 +63,7 @@ vi:
       contact: "Liên hệ"
     banner:
       find_restaurant: "Tìm nhà hàng gần nhất"
+
   users:
     button_view: "Thêm"
     registrations:
@@ -89,6 +90,12 @@ vi:
       total: "Giá"
       continue: "Mua tiếp"
       checkout: "Thanh toán"
+    checkout_modal:
+      receiver: " Người nhận"
+      number: " Số điện thoại"
+      address: " Địa chỉ"
+      checkout: " Thông tin "
+      send: "Đặt hàng"
   views:
     layout:
       modal:

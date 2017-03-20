@@ -7,7 +7,9 @@
           <div class="img-product">
             <%= link_to "#", "data-toggle": "modal",
               "data-target": "#product_modal_#{product.id}" do %>
-              <%= image_tag product.image, class: "size-img-thumbnail" %>
+              <span class="size-img-thumbnail">
+                <%= default_image product %>
+              </span>
             <% end %>
           </div>
           <div class="tittle-product">

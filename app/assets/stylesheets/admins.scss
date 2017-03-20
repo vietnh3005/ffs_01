@@ -2,9 +2,15 @@
 @import "bootstrap";
 @import "font-awesome";
 
-modal-title {
+.modal-title {
   text-align: center;
 }
+.img-product {
+  img {
+    width: 100%;
+  }
+}
+
 .size-img-modal {
   height: 100%;
   width: 160px;

@@ -27,7 +27,8 @@ class OrdersController < ApplicationController
 
   private
   def order_params
-    params.require(:order).permit :status, :total
+    params.require(:order).permit :status, :total, :rec_name, :rec_phone,
+      :rec_addr
   end
 
   def check_user
