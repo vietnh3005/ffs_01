@@ -98,14 +98,16 @@ vi:
       send: "Đặt hàng"
   views:
     layout:
+      header:
+        all_category: "Tất cả sản phẩm"
       modal:
         name: "Tên"
         status: "Trạng thái"
         description: "Mô tả"
         price: "Giá"
         name_cat: "Danh mục"
-        Available: "Có sẵn"
-        Unavailable: "Không Có sẵn"
+        available: "Có sẵn"
+        unavailable: "Không Có sẵn"
         close: "Đóng"
         title_details: "Chi tiết sản phẩm"
         quantity: "Chọn số lượng: "

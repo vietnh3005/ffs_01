@@ -100,38 +100,13 @@
     <div class="menu-nav">
       <ul class="nav">
         <li>
-          <%= link_to products_path do %>
-            <%= t "home" %>
+          <%= link_to products_path, remote: true do %>
+            <%= t "views.layout.header.all_category" %>
           <% end %>
-        </li>
-        <li>
-          <%= link_to "#" do %>
-            <%= t "layouts.header.store" %>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to "#" do %>
-            <%= t "layouts.header.combo" %>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to "#" do %>
-            <%= t "layouts.footer.rice" %>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to "#" do %>
-            <%= t "layouts.footer.food" %>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to "#" do %>
-            <%= t "layouts.footer.fruit" %>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to "#" do %>
-            <%= t "layouts.footer.humberger" %>
+          <% @categories.each do |category| %>
+            <%= link_to products_path(search: {category_name: category}), remote: true do %>
+              <%= category %>
+            <% end %>
           <% end %>
         </li>
       </ul>
