@@ -16,7 +16,7 @@ class Order < ApplicationRecord
   }
 
   scope :waiting_order, -> {where status: :waiting}
-
+  scope :ready_order, ->{where status: :accepted}
   before_create :init_order
   before_save :update_subtotal
 

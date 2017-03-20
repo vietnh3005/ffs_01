@@ -10,7 +10,8 @@ class Ability
         can :manage, Order
       elsif staff.chef?
         can :manage, Order
-        can :read, Product
+      elsif staff.shipper?
+        can :manage, Order
       else
         cannot :access, :all
       end

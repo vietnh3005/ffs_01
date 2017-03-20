@@ -191,6 +191,20 @@ vi:
         copy_right: "2017 Trang web được phát triển bởi"
         name_team: "RUBY TEAM"
   admin:
+    shippers:
+      index:
+        shipper_manage: "Danh sách đơn hàng"
+        order_list: "Danh sách"
+      list_orders:
+        rec_name: "Tên khách hàng"
+        rec_addr: "Địa chỉ "
+        rec_phone: "SĐT"
+        order_details: "Chi tiết"
+        total: "Tổng giá trị"
+        status: "Trạng thái"
+        abort: "Hủy"
+        finished: "Hoàn thành"
+
     chefs:
       index:
         chef_manage: "Danh sách đơn hàng"

@@ -6,6 +6,8 @@ class Staffs::SessionsController < Devise::SessionsController
       admin_orders_path
     elsif resource.chef?
       admin_chef_order_path
+    elsif resource.shipper?
+      admin_shipper_order_path
     end
   end
 end
