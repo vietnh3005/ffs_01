@@ -1,4 +1,5 @@
 class Order < ApplicationRecord
+
   has_many :products, through: :order_details
   has_many :order_details, dependent: :destroy
 
@@ -15,14 +16,22 @@ class Order < ApplicationRecord
     where("shop_id = ?", staff.shop_id)
   }
 
-  scope :waiting_order, -> {where status: :waiting}
-  scope :ready_order, ->{where status: :accepted}
   before_create :init_order
   before_save :update_subtotal
 
   def subtotal
     order_details.collect {|order_detail| order_detail.valid? ?
     order_detail.total : Settings.min_total}.sum
+  end
+
+  class << self
+    def status search
+      if search
+        self.where status: search
+      else
+        self.all
+      end
+    end
   end
 
   private
@@ -33,4 +42,5 @@ class Order < ApplicationRecord
   def update_subtotal
     self[:total] = subtotal
   end
+
 end

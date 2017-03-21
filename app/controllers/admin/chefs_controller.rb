@@ -3,7 +3,8 @@ class Admin::ChefsController < ApplicationController
   layout "staffs_layout"
 
   def index
-    @orders = Order.shop_order(current_staff).waiting_order
+    @orders = Order.shop_order(current_staff).status(params[:status])
+      .paginate page: params[:list_order]
   end
 
   def edit

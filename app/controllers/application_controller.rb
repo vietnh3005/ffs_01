@@ -15,4 +15,8 @@ class ApplicationController < ActionController::Base
   def set_locale
    I18n.locale = params[:locale] || I18n.default_locale
   end
+
+  def after_sign_out_path_for resource
+    new_staff_session_path
+  end
 end

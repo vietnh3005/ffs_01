@@ -24,14 +24,19 @@
       <div class="clearfix"></div>
     </div>
   </div>
-
   <div class="menu-header">
     <div class="container">
       <ul>
-         <li>
-          <%= link_to "#" do %>
-            <i class="fa fa-money"></i>
-              <%= t "views.admins.header.menu.order" %>
+        <li>
+          <%= link_to admin_chef_order_path(status: "waiting") do %>
+            <i class="fa fa-clock-o"></i>
+              <%= t ".waiting" %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to admin_chef_order_path(status: %w(rejected accepted finished)) do %>
+            <i class="fa fa-history"></i>
+              <%= t ".history" %>
           <% end %>
         </li>
       </ul>
