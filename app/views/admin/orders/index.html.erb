@@ -5,17 +5,16 @@
 <% else %>
   <% provide :title, t(".order_list") %>
 <% end %>
-  <% provide :title, t(".order_list") %>
 <div class="main-content">
   <div class="container">
     <div class="info-manager">
       <div class="title-manager pull-left">
         <% if params[:unassign] %>
-        <h2><%= t ".order" %></h2>
+          <h2><%= t ".order" %></h2>
         <% elsif params[:assign] %>
-        <h2><%= t ".order_assign" %></h2>
+          <h2><%= t ".order_assign" %></h2>
         <% else %>
-        <h2><%= t ".order_list" %></h2>
+          <h2><%= t ".order_list" %></h2>
         <% end %>
       </div>
       <div class="clearfix"></div>

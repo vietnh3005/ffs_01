@@ -199,10 +199,10 @@ en:
         delete_staff: "Staff deleted"
         staff_not_exist: "Staff not exist"
         wrong_staff: "Can't delete staff"
-      product:
-        create_product: "Create product success"
-        update_product: "Product updated"
-        delete_product: "Product deleted"
+      category:
+        create_category: "Create category success"
+        update_category: "Category updated"
+        delete_category: "Category deleted"
       discount:
         update_success: "Update successed"
         update_fail: "Update failed"

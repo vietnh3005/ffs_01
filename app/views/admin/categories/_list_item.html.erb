@@ -1,0 +1,42 @@
+<thead>
+  <tr>
+    <th><%= t "views.admins.form.image" %></th>
+    <th><%= t "views.admins.form.name" %></th>
+    <th><%= t "views.admins.form.price" %></th>
+    <th><%= t "views.admins.form.status" %></th>
+    <th><%= t "views.admins.form.category.name" %></th>
+    <th class="action"><%= t "views.admins.form.action" %></th>
+  </tr>
+</thead>
+<tbody>
+  <% @category.products.each do |product| %>
+    <tr class="background-tr">
+      <td class="img-product">
+        <%= default_image product %>
+      </td>
+      <td><%= product.name %></td>
+      <td><%= number_to_currency product.price %></td>
+      <td>
+        <%= t "admin.products.list_product.#{Settings.product.status.send(product.status)}" %>
+      </td>
+      <td>
+        <ul class="text-center">
+          <% product.categories.each do |category| %>
+            <%= link_to admin_categories_path do %>
+              <li><%= category.name %></li>
+            <% end %>
+          <% end %>
+        </ul>
+      </td>
+      <td>
+        <%= link_to edit_admin_product_path product do %>
+          <i class="fa fa-pencil-square"></i>
+        <% end %>
+        <%= link_to admin_product_path(product), method: :delete,
+          data: {confirm: t("views.admins.form.confirm")}, remote: :true do %>
+          <i class="fa fa-trash"></i>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</tbody>

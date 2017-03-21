@@ -10,7 +10,9 @@
       <%= form_for @order_detail do |f| %>
         <div class="row">
           <div class="col-md-5">
-            <%= image_tag product.image, class: "size-img-modal" %>
+            <div class="size-img-modal">
+              <%= default_image product %>
+            </div>
           </div>
           <div class="col-md-7">
             <div class="info-product">

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :users, only: [:index, :destroy]
     resources :staffs, except: [:show]
     resources :products, except: [:show]
-    resources :categories, except: [:show]
+    resources :categories
     resources :discounts
     get "chefs/*page", to: "chefs#index", page: "index", as: "chef_order"
   end

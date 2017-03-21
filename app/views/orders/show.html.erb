@@ -1,47 +1,41 @@
 <% provide :title, t(".cart") %>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12 col-md-10 col-md-offset-1">
-      <table class="table table-hover">
-        <thead>
-        <th><%= t ".product" %></th>
-        <th><%= t ".quantity" %></th>
-        <th class="text-center"><%= t ".price" %></th>
-        <th class="text-center"><%= t ".total" %></th>
-        <th></th>
-        </thead>
-        <tbody>
-          <%= render @order_details %>
-          <tr>
-            <td></td>
-            <td></td>
-            <td class="text-center">
-              <%= t ".total_pay"%>
-            </td>
-            <td class="text-center">
-              <%= number_to_currency @order.subtotal  %>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>
-              <%= link_to t("orders.show.continue"), products_path ,
-                class: "btn btn-default"%>
-            </td>
-            <% unless @order.subtotal == Settings.zero %>
-              <td>
-                <%= link_to t(".checkout"), "#", class: "btn btn-danger",
-                  data: {toggle: "modal", target: "#order_modal_#{@order.id}"},
-                  remote: true %>
-                <%= render "checkout_modal", order: @order %>
-              </td>
-            <% end %>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
+<table class="table-order table table-bordered table-hover">
+  <thead>
+    <th><%= t ".product" %></th>
+    <th><%= t ".quantity" %></th>
+    <th class="text-center"><%= t ".price" %></th>
+    <th class="text-center"><%= t ".total" %></th>
+    <th></th>
+  </thead>
+  <tbody>
+    <%= render @order_details %>
+    <tr>
+      <td></td>
+      <td></td>
+      <td class="text-center">
+        <%= t ".total_pay"%>
+      </td>
+      <td class="text-center">
+        <%= number_to_currency @order.subtotal  %>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>
+        <%= link_to t("orders.show.continue"), products_path ,
+          class: "btn btn-default"%>
+      </td>
+      <% unless @order.subtotal == Settings.zero %>
+        <td>
+          <%= link_to t(".checkout"), "#", class: "btn btn-danger",
+            data: {toggle: "modal", target: "#order_modal_#{@order.id}"},
+            remote: true %>
+          <%= render "checkout_modal", order: @order %>
+        </td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>

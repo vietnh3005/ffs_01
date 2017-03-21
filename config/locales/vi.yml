@@ -224,8 +224,8 @@ vi:
         order_assign: "Đã chuyển giao đơn hàng"
     products:
       list_product:
-        Available: "Có sẵn"
-        Unavailable: "Không Có sẵn"
+        available: "Có sẵn"
+        unavailable: "Không Có sẵn"
     discounts:
       index:
         show: "Giảm giá"
@@ -268,10 +268,10 @@ vi:
         delete_staff: "Nhân viên đã xóa"
         staff_not_exist: "Nhân viên không tồn tại"
         wrong_staff: "Không thể xóa nhân viên"
-      product:
-        create_product: "Sản phẩm được khởi tạo thành công"
-        update_product: "Sản phẩm đã cập nhật"
-        delete_product: "Sản phẩm đã xóa"
+      category:
+        create_category: "Chuyên mục được khởi tạo thành công"
+        update_category: "Chuyên mục đã cập nhật"
+        delete_category: "Chuyên mục đã xóa"
       discount:
         update_success: "Cập nhật thành công"
         update_fail: "Cập nhật thất bại"
