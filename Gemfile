@@ -23,6 +23,7 @@ gem "faker"
 gem "cancancan", "~> 1.10"
 gem "bootstrap-datepicker-rails"
 gem "bxslider-rails"
+gem "toastr-rails"
 
 group :development, :test do
   gem "sqlite3", "1.3.12"

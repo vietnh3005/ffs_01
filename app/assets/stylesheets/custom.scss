@@ -8,6 +8,17 @@
 #users {
   background: url(/assets/body-bg7.png);
   .user {
+    .media-body {
+      h2 {
+        font-size: 20px;
+      }
+    }
+    .form-checkout {
+      margin: 10px 0;
+    }
+    .table-order {
+      background: #fff;
+    }
     .container {
       width: 970px;
     }
